@@ -14,3 +14,16 @@ export interface IRestaurantObject {
   hours: string,
   attire: string,
 };
+
+
+// ACTION CREATORS
+
+export interface IActionObject {
+  type: string,
+  [key: string]: any
+}
+
+export interface IAddRestaurantAction {
+  type: 'ADD_RESTAURANTS',
+  restaurants: IRestaurantObject[]
+};
