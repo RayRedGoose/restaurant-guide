@@ -1,0 +1,29 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`should match the snapshot 1`] = `
+<main
+  className="restaurants-container"
+>
+  <RestaurantCard
+    key="restaurant0"
+    restaurant={
+      Object {
+        "address1": "201 Waterfront St",
+        "attire": "business casual",
+        "city": "Oxon Hill",
+        "genre": "Steak,American,Contemporary,Seafood,Cafe",
+        "hours": "Open Daily 5:30 PM-10:00 PM",
+        "id": "ac11",
+        "lat": "38.782098",
+        "long": "-77.017492",
+        "name": "Old Hickory Steakhouse",
+        "state": "MD",
+        "tags": "Social,Food and Dining,Restaurants,Steakhouses",
+        "telephone": "(301) 965-4000",
+        "website": "http://www.gaylordnational.com",
+        "zip": "20745",
+      }
+    }
+  />
+</main>
+`;
