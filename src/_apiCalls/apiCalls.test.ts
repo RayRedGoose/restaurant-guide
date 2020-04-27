@@ -1,7 +1,8 @@
 /**
  * @jest-environment jsdom
  */
-import { IRestaurantObject } from 'assets/ts/interfaces';
+import { IRestaurantObject } from 'assets/ts/interfaces'
+import mockRestaurant from 'assets/ts/test/mockRestaurant';
 import { IHeaderObject, getRestaurants } from './apiCalls';
 
 describe('apiCalls', () => {
@@ -21,22 +22,7 @@ describe('apiCalls', () => {
         }
       };
 
-      mockResponse = [{
-        id: 'ac11',
-        name: 'Old Hickory Steakhouse',
-        address1: "201 Waterfront St",
-        city: "Oxon Hill",
-        state: "MD",
-        zip: "20745",
-        lat: "38.782098",
-        long: "-77.017492",
-        telephone: "(301) 965-4000",
-        tags: "Social,Food and Dining,Restaurants,Steakhouses",
-        website: "http://www.gaylordnational.com",
-        genre: "Steak,American,Contemporary,Seafood,Cafe",
-        hours: "Open Daily 5:30 PM-10:00 PM",
-        attire: "business casual"
-      }];
+      mockResponse = [ mockRestaurant ];
 
       window.fetch = jest.fn().mockImplementation(() => {
         return Promise.resolve({
