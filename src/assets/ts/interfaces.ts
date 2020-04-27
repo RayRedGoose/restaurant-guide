@@ -16,6 +16,10 @@ export interface IRestaurantObject {
 };
 
 
+export interface IAppStore {
+  restaurants: IRestaurantObject[]
+}
+
 // ACTION CREATORS
 
 export interface IActionObject {
