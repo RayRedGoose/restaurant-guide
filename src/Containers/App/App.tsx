@@ -1,18 +1,27 @@
 import './App.scss';
 import React, { useEffect, useState } from 'react';
 import { useDispatch } from 'react-redux';
+import { IRestaurantObject } from 'assets/ts/interfaces';
+import { sortByAlphabet } from '_utils';
 import { getRestaurants } from '_apiCalls/apiCalls';
 import { addRestaurants } from 'redux_utils/actions';
+import RestaurantContainer from 'Containers/RestaurantContainer/RestaurantContainer';
 
 const App: React.FC = () => {
   const dispatch = useDispatch();
   const [ error, setError ] = useState<string>('');
   const [ loaded, setLoaded ] = useState<boolean>(false);
+
+  const addToStore = (restaurants: IRestaurantObject[]): void => {
+    const restaurantsSorted = sortByAlphabet(restaurants);
+    dispatch(addRestaurants(restaurantsSorted));
+    setLoaded(true);
+  }
+
   const fetchRestaurants = async (): Promise<void> => {
     try {
       const restaurants = await getRestaurants();
-      dispatch(addRestaurants(restaurants));
-      setLoaded(true);
+      if (restaurants !== undefined) addToStore(restaurants);
     }
     catch (error) {
       setLoaded(false);
@@ -26,8 +35,8 @@ const App: React.FC = () => {
 
   return (
     <div className="app">
-      { !loaded && <p>Loading ...</p> }
-      { loaded && <p>Loading is ended!</p>}
+      { !loaded && error === '' && <p>Loading ...</p> }
+      { loaded && error === '' && <RestaurantContainer />}
       { error !== '' && <p>{ error }</p> }
     </div>
   );

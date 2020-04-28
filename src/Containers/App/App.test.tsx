@@ -1,10 +1,15 @@
 /**
- * @jest-environment jsdom
- */
+* @jest-environment jsdom
+*/
+
+/**
+* Suppress React 16.8 act() warnings globally.
+*/
 
 import React from 'react';
 import { act, cleanup, render, RenderResult } from '@testing-library/react';
 import { IRestaurantObject } from 'assets/ts/interfaces';
+import mockRestaurant from 'assets/ts/test/mockRestaurant';
 import App from './App';
 import { getRestaurants } from '_apiCalls/apiCalls';
 import { addRestaurants } from 'redux_utils/actions';
@@ -13,8 +18,10 @@ jest.mock('_apiCalls/apiCalls');
 jest.mock('redux_utils/actions');
 
 const mockDispatch = jest.fn();
+
 jest.mock('react-redux', () => ({
-  useDispatch: () => mockDispatch
+  useDispatch: () => mockDispatch,
+  useSelector: () => [mockRestaurant]
 }));
 
 describe('App component', () => {
@@ -22,7 +29,7 @@ describe('App component', () => {
 
   afterEach(() => cleanup());
 
-  it('should match the snapshot while fetch is loading', async() => {
+  it('should match the snapshot while fetch is loading', async () => {
     await act(async () => {
       wrapper = render(<App />);
     });
@@ -30,22 +37,7 @@ describe('App component', () => {
   });
 
   describe("Tests for happy result of fetching", () => {
-    const mockResponse: IRestaurantObject[] = [{
-      id: 'ac11',
-      name: 'Old Hickory Steakhouse',
-      address1: "201 Waterfront St",
-      city: "Oxon Hill",
-      state: "MD",
-      zip: "20745",
-      lat: "38.782098",
-      long: "-77.017492",
-      telephone: "(301) 965-4000",
-      tags: "Social,Food and Dining,Restaurants,Steakhouses",
-      website: "http://www.gaylordnational.com",
-      genre: "Steak,American,Contemporary,Seafood,Cafe",
-      hours: "Open Daily 5:30 PM-10:00 PM",
-      attire: "business casual"
-    }];
+    const mockResponse: IRestaurantObject[] = [ mockRestaurant ];
 
     beforeEach(() => {
       (getRestaurants as jest.Mock).mockImplementation(() => {
