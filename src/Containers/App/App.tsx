@@ -4,7 +4,7 @@ import { useDispatch } from 'react-redux';
 import { IRestaurantObject } from 'assets/ts/interfaces';
 import { sortByAlphabet } from '_utils';
 import { getRestaurants } from '_apiCalls/apiCalls';
-import { addRestaurants } from 'redux_utils/actions';
+import { addRestaurants, addMaxPages } from 'redux_utils/actions';
 import RestaurantContainer from 'Containers/RestaurantContainer/RestaurantContainer';
 
 const App: React.FC = () => {
@@ -15,6 +15,7 @@ const App: React.FC = () => {
   const addToStore = (restaurants: IRestaurantObject[]): void => {
     const restaurantsSorted = sortByAlphabet(restaurants);
     dispatch(addRestaurants(restaurantsSorted));
+    dispatch(addMaxPages(restaurants.length));
     setLoaded(true);
   }
 
