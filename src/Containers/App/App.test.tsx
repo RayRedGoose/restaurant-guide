@@ -2,26 +2,25 @@
 * @jest-environment jsdom
 */
 
-/**
-* Suppress React 16.8 act() warnings globally.
-*/
-
 import React from 'react';
 import { act, cleanup, render, RenderResult } from '@testing-library/react';
 import { IRestaurantObject } from 'assets/ts/interfaces';
+import mockStore from 'assets/ts/test/mockStore';
 import mockRestaurant from 'assets/ts/test/mockRestaurant';
 import App from './App';
 import { getRestaurants } from '_apiCalls/apiCalls';
-import { addRestaurants } from 'redux_utils/actions';
+import { addRestaurants, addMaxPages } from 'redux_utils/actions';
 
 jest.mock('_apiCalls/apiCalls');
 jest.mock('redux_utils/actions');
 
 const mockDispatch = jest.fn();
-
 jest.mock('react-redux', () => ({
   useDispatch: () => mockDispatch,
-  useSelector: () => [mockRestaurant]
+  useSelector: () => ({
+    ...mockStore,
+    displayPage: 1
+  })
 }));
 
 describe('App component', () => {
@@ -64,6 +63,13 @@ describe('App component', () => {
         render(<App />);
       });
       expect(addRestaurants).toHaveBeenCalledWith(mockResponse);
+    });
+
+    it('should call addMaxPages with number of fetched items as an attribute', async () => {
+      await act(async () => {
+        render(<App />);
+      });
+      expect(addMaxPages).toHaveBeenCalledWith(1);
     });
   });
 
