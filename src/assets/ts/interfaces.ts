@@ -17,7 +17,9 @@ export interface IRestaurantObject {
 
 
 export interface IAppStore {
-  restaurants: IRestaurantObject[]
+  restaurants: IRestaurantObject[],
+  currentPage: number,
+  maxPages: number
 }
 
 // ACTION CREATORS
@@ -30,4 +32,14 @@ export interface IActionObject {
 export interface IAddRestaurantAction {
   type: 'ADD_RESTAURANTS',
   restaurants: IRestaurantObject[]
+};
+
+export interface IChangeCurrentPageAction {
+  type: 'CHANGE_CURRENT_PAGE',
+  changer: number
+};
+
+export interface IAddMaxPages {
+  type: 'ADD_MAX_PAGES',
+  total: number
 };
