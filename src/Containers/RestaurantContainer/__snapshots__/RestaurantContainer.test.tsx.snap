@@ -1,29 +1,305 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`should match the snapshot 1`] = `
-<main
-  className="restaurants-container"
->
-  <RestaurantCard
-    key="restaurant0"
-    restaurant={
-      Object {
-        "address1": "201 Waterfront St",
-        "attire": "business casual",
-        "city": "Oxon Hill",
-        "genre": "Steak,American,Contemporary,Seafood,Cafe",
-        "hours": "Open Daily 5:30 PM-10:00 PM",
-        "id": "ac11",
-        "lat": "38.782098",
-        "long": "-77.017492",
-        "name": "Old Hickory Steakhouse",
-        "state": "MD",
-        "tags": "Social,Food and Dining,Restaurants,Steakhouses",
-        "telephone": "(301) 965-4000",
-        "website": "http://www.gaylordnational.com",
-        "zip": "20745",
-      }
-    }
-  />
-</main>
+exports[`RestaurantContainer should match the snapshot 1`] = `
+Object {
+  "asFragment": [Function],
+  "baseElement": <body>
+    <div>
+      <main
+        class="restaurants-container"
+      >
+        <section
+          class="restaurant-card"
+        >
+          <section
+            class="card-description"
+          >
+            <h2>
+              Old Hickory Steakhouse
+            </h2>
+            <main>
+              <p
+                class="genre"
+              >
+                Steak
+              </p>
+              <p
+                class="genre"
+              >
+                American
+              </p>
+              <p
+                class="genre"
+              >
+                Contemporary
+              </p>
+              <p
+                class="genre"
+              >
+                Seafood
+              </p>
+              <p
+                class="genre"
+              >
+                Cafe
+              </p>
+            </main>
+          </section>
+          <section
+            class="card-information"
+          >
+            <p
+              class="location"
+            >
+              Oxon Hill, MD
+            </p>
+            <p
+              class="phone"
+            >
+              (301) 965-4000
+            </p>
+          </section>
+        </section>
+        <footer>
+          <p
+            class="pages"
+          >
+            1 / 3
+          </p>
+          <button
+            id="next-page-btn"
+          >
+             + 
+          </button>
+        </footer>
+      </main>
+    </div>
+  </body>,
+  "container": <div>
+    <main
+      class="restaurants-container"
+    >
+      <section
+        class="restaurant-card"
+      >
+        <section
+          class="card-description"
+        >
+          <h2>
+            Old Hickory Steakhouse
+          </h2>
+          <main>
+            <p
+              class="genre"
+            >
+              Steak
+            </p>
+            <p
+              class="genre"
+            >
+              American
+            </p>
+            <p
+              class="genre"
+            >
+              Contemporary
+            </p>
+            <p
+              class="genre"
+            >
+              Seafood
+            </p>
+            <p
+              class="genre"
+            >
+              Cafe
+            </p>
+          </main>
+        </section>
+        <section
+          class="card-information"
+        >
+          <p
+            class="location"
+          >
+            Oxon Hill, MD
+          </p>
+          <p
+            class="phone"
+          >
+            (301) 965-4000
+          </p>
+        </section>
+      </section>
+      <footer>
+        <p
+          class="pages"
+        >
+          1 / 3
+        </p>
+        <button
+          id="next-page-btn"
+        >
+           + 
+        </button>
+      </footer>
+    </main>
+  </div>,
+  "debug": [Function],
+  "findAllByAltText": [Function],
+  "findAllByDisplayValue": [Function],
+  "findAllByLabelText": [Function],
+  "findAllByPlaceholderText": [Function],
+  "findAllByRole": [Function],
+  "findAllByTestId": [Function],
+  "findAllByText": [Function],
+  "findAllByTitle": [Function],
+  "findByAltText": [Function],
+  "findByDisplayValue": [Function],
+  "findByLabelText": [Function],
+  "findByPlaceholderText": [Function],
+  "findByRole": [Function],
+  "findByTestId": [Function],
+  "findByText": [Function],
+  "findByTitle": [Function],
+  "getAllByAltText": [Function],
+  "getAllByDisplayValue": [Function],
+  "getAllByLabelText": [Function],
+  "getAllByPlaceholderText": [Function],
+  "getAllByRole": [Function],
+  "getAllByTestId": [Function],
+  "getAllByText": [Function],
+  "getAllByTitle": [Function],
+  "getByAltText": [Function],
+  "getByDisplayValue": [Function],
+  "getByLabelText": [Function],
+  "getByPlaceholderText": [Function],
+  "getByRole": [Function],
+  "getByTestId": [Function],
+  "getByText": [Function],
+  "getByTitle": [Function],
+  "queryAllByAltText": [Function],
+  "queryAllByDisplayValue": [Function],
+  "queryAllByLabelText": [Function],
+  "queryAllByPlaceholderText": [Function],
+  "queryAllByRole": [Function],
+  "queryAllByTestId": [Function],
+  "queryAllByText": [Function],
+  "queryAllByTitle": [Function],
+  "queryByAltText": [Function],
+  "queryByDisplayValue": [Function],
+  "queryByLabelText": [Function],
+  "queryByPlaceholderText": [Function],
+  "queryByRole": [Function],
+  "queryByTestId": [Function],
+  "queryByText": [Function],
+  "queryByTitle": [Function],
+  "rerender": [Function],
+  "unmount": [Function],
+}
+`;
+
+exports[`RestaurantContainer should match the snapshot with the next pack of restaurants 1`] = `
+Object {
+  "asFragment": [Function],
+  "baseElement": <body>
+    <div>
+      <main
+        class="restaurants-container"
+      >
+        <footer>
+          <button
+            id="prev-page-btn"
+          >
+             - 
+          </button>
+          <p
+            class="pages"
+          >
+            2 / 3
+          </p>
+          <button
+            id="next-page-btn"
+          >
+             + 
+          </button>
+        </footer>
+      </main>
+    </div>
+  </body>,
+  "container": <div>
+    <main
+      class="restaurants-container"
+    >
+      <footer>
+        <button
+          id="prev-page-btn"
+        >
+           - 
+        </button>
+        <p
+          class="pages"
+        >
+          2 / 3
+        </p>
+        <button
+          id="next-page-btn"
+        >
+           + 
+        </button>
+      </footer>
+    </main>
+  </div>,
+  "debug": [Function],
+  "findAllByAltText": [Function],
+  "findAllByDisplayValue": [Function],
+  "findAllByLabelText": [Function],
+  "findAllByPlaceholderText": [Function],
+  "findAllByRole": [Function],
+  "findAllByTestId": [Function],
+  "findAllByText": [Function],
+  "findAllByTitle": [Function],
+  "findByAltText": [Function],
+  "findByDisplayValue": [Function],
+  "findByLabelText": [Function],
+  "findByPlaceholderText": [Function],
+  "findByRole": [Function],
+  "findByTestId": [Function],
+  "findByText": [Function],
+  "findByTitle": [Function],
+  "getAllByAltText": [Function],
+  "getAllByDisplayValue": [Function],
+  "getAllByLabelText": [Function],
+  "getAllByPlaceholderText": [Function],
+  "getAllByRole": [Function],
+  "getAllByTestId": [Function],
+  "getAllByText": [Function],
+  "getAllByTitle": [Function],
+  "getByAltText": [Function],
+  "getByDisplayValue": [Function],
+  "getByLabelText": [Function],
+  "getByPlaceholderText": [Function],
+  "getByRole": [Function],
+  "getByTestId": [Function],
+  "getByText": [Function],
+  "getByTitle": [Function],
+  "queryAllByAltText": [Function],
+  "queryAllByDisplayValue": [Function],
+  "queryAllByLabelText": [Function],
+  "queryAllByPlaceholderText": [Function],
+  "queryAllByRole": [Function],
+  "queryAllByTestId": [Function],
+  "queryAllByText": [Function],
+  "queryAllByTitle": [Function],
+  "queryByAltText": [Function],
+  "queryByDisplayValue": [Function],
+  "queryByLabelText": [Function],
+  "queryByPlaceholderText": [Function],
+  "queryByRole": [Function],
+  "queryByTestId": [Function],
+  "queryByText": [Function],
+  "queryByTitle": [Function],
+  "rerender": [Function],
+  "unmount": [Function],
+}
 `;
