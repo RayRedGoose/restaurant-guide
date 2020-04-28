@@ -8,9 +8,62 @@ Object {
       <div
         class="app"
       >
-        <p>
-          Loading is ended!
-        </p>
+        <main
+          class="restaurants-container"
+        >
+          <section
+            class="restaurant-card"
+          >
+            <section
+              class="card-description"
+            >
+              <h2>
+                Old Hickory Steakhouse
+              </h2>
+              <main>
+                <p
+                  class="genre"
+                >
+                  Steak
+                </p>
+                <p
+                  class="genre"
+                >
+                  American
+                </p>
+                <p
+                  class="genre"
+                >
+                  Contemporary
+                </p>
+                <p
+                  class="genre"
+                >
+                  Seafood
+                </p>
+                <p
+                  class="genre"
+                >
+                  Cafe
+                </p>
+              </main>
+            </section>
+            <section
+              class="card-information"
+            >
+              <p
+                class="location"
+              >
+                Oxon Hill, MD
+              </p>
+              <p
+                class="phone"
+              >
+                (301) 965-4000
+              </p>
+            </section>
+          </section>
+        </main>
       </div>
     </div>
   </body>,
@@ -18,9 +71,62 @@ Object {
     <div
       class="app"
     >
-      <p>
-        Loading is ended!
-      </p>
+      <main
+        class="restaurants-container"
+      >
+        <section
+          class="restaurant-card"
+        >
+          <section
+            class="card-description"
+          >
+            <h2>
+              Old Hickory Steakhouse
+            </h2>
+            <main>
+              <p
+                class="genre"
+              >
+                Steak
+              </p>
+              <p
+                class="genre"
+              >
+                American
+              </p>
+              <p
+                class="genre"
+              >
+                Contemporary
+              </p>
+              <p
+                class="genre"
+              >
+                Seafood
+              </p>
+              <p
+                class="genre"
+              >
+                Cafe
+              </p>
+            </main>
+          </section>
+          <section
+            class="card-information"
+          >
+            <p
+              class="location"
+            >
+              Oxon Hill, MD
+            </p>
+            <p
+              class="phone"
+            >
+              (301) 965-4000
+            </p>
+          </section>
+        </section>
+      </main>
     </div>
   </div>,
   "debug": [Function],
@@ -86,9 +192,6 @@ Object {
         class="app"
       >
         <p>
-          Loading ...
-        </p>
-        <p>
           Fetch failed!
         </p>
       </div>
@@ -98,9 +201,6 @@ Object {
     <div
       class="app"
     >
-      <p>
-        Loading ...
-      </p>
       <p>
         Fetch failed!
       </p>
@@ -169,7 +269,7 @@ Object {
         class="app"
       >
         <p>
-          Loading is ended!
+          Loading ...
         </p>
       </div>
     </div>
@@ -179,7 +279,7 @@ Object {
       class="app"
     >
       <p>
-        Loading is ended!
+        Loading ...
       </p>
     </div>
   </div>,
