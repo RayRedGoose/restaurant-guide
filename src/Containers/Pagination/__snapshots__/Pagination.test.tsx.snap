@@ -1,0 +1,23 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Pagination should match the snapshot 1`] = `
+<footer>
+  <button
+    id="prev-page-btn"
+    onClick={[Function]}
+  >
+     - 
+  </button>
+  <p
+    className="pages"
+  >
+    2 / 6
+  </p>
+  <button
+    id="next-page-btn"
+    onClick={[Function]}
+  >
+     + 
+  </button>
+</footer>
+`;
