@@ -17,4 +17,21 @@ const mockRestaurant: IRestaurantObject = {
   attire: "business casual"
 };
 
+export const mockRestaurantAdditional: IRestaurantObject = {
+  "id": "00b35e1a-82b1-4988-b8b9-6df826db2818",
+  "name": "Matsuhisa",
+  "address1": "303 E Main St",
+  "city": "Aspen",
+  "state": "CO",
+  "zip": "81611",
+  "lat": "39.190723",
+  "long": "-106.82031",
+  "telephone": "(970) 544-6628",
+  "tags": "Social,Food and Dining,Restaurants,Japanese,Social,Food and Dining,Restaurants,Sushi",
+  "website": "http://www.matsuhisaaspen.com",
+  "genre": "Japanese,Sushi,Asian,Contemporary,Seafood",
+  "hours": "Open Daily 5:30 PM-9:00 PM",
+  "attire": "business casual"
+};
+
 export default mockRestaurant;
