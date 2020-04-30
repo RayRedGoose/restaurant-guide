@@ -1,7 +1,7 @@
 import maxPagesReducer from './maxPages';
 import {
   IActionObject,
-  IAddMaxPages
+  IAddMaxPagesAction
 } from 'assets/ts/interfaces';
 
 describe('maxPagesReducer', () => {
@@ -17,7 +17,7 @@ describe('maxPagesReducer', () => {
   });
 
   it("should return new number if type of action is ADD_MAX_PAGES", () => {
-    const mockAction: IAddMaxPages = {
+    const mockAction: IAddMaxPagesAction = {
       type: 'ADD_MAX_PAGES',
       total: 23
     };
