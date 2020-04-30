@@ -9,7 +9,8 @@ import mockStore from 'assets/ts/test/mockStore';
 import mockRestaurant from 'assets/ts/test/mockRestaurant';
 import App from './App';
 import { getRestaurants } from '_apiCalls/apiCalls';
-import { addRestaurants, addMaxPages } from 'redux_utils/actions';
+import { addRestaurants, addMaxPages, addGenres, addAttires } from 'redux_utils/actions';
+import { sortByAlphabet, getGenres, getAttire } from '_utils';
 
 jest.mock('_apiCalls/apiCalls');
 jest.mock('redux_utils/actions');
@@ -70,6 +71,22 @@ describe('App component', () => {
         render(<App />);
       });
       expect(addMaxPages).toHaveBeenCalledWith(1);
+    });
+
+    it('should call addGenres with genres from restaurant objects as an attribute', async () => {
+      const genres: string[] = getGenres(mockResponse);
+      await act(async () => {
+        render(<App />);
+      });
+      expect(addGenres).toHaveBeenCalledWith(genres);
+    });
+
+    it('should call addAttires with attires from restaurant objects as an attribute', async () => {
+      const attires: string[] = getAttire(mockResponse);
+      await act(async () => {
+        render(<App />);
+      });
+      expect(addAttires).toHaveBeenCalledWith(attires);
     });
   });
 
