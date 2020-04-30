@@ -11,6 +11,15 @@ Object {
         <header
           class="sorting-panel"
         >
+          <form>
+            <input
+              type="text"
+              value=""
+            />
+            <button>
+              Search
+            </button>
+          </form>
           <section
             class="filter"
           >
@@ -111,6 +120,15 @@ Object {
       <header
         class="sorting-panel"
       >
+        <form>
+          <input
+            type="text"
+            value=""
+          />
+          <button>
+            Search
+          </button>
+        </form>
         <section
           class="filter"
         >
@@ -268,6 +286,15 @@ Object {
         <header
           class="sorting-panel"
         >
+          <form>
+            <input
+              type="text"
+              value=""
+            />
+            <button>
+              Search
+            </button>
+          </form>
           <section
             class="filter"
           >
@@ -303,6 +330,15 @@ Object {
       <header
         class="sorting-panel"
       >
+        <form>
+          <input
+            type="text"
+            value=""
+          />
+          <button>
+            Search
+          </button>
+        </form>
         <section
           class="filter"
         >
@@ -395,6 +431,15 @@ Object {
         <header
           class="sorting-panel"
         >
+          <form>
+            <input
+              type="text"
+              value=""
+            />
+            <button>
+              Search
+            </button>
+          </form>
           <section
             class="filter"
           >
@@ -430,6 +475,15 @@ Object {
       <header
         class="sorting-panel"
       >
+        <form>
+          <input
+            type="text"
+            value=""
+          />
+          <button>
+            Search
+          </button>
+        </form>
         <section
           class="filter"
         >
