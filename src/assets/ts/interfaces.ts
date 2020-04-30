@@ -15,6 +15,13 @@ export interface IRestaurantObject {
   attire: string,
 };
 
+export interface IFilters {
+  stateFilter: string,
+  genreFilter: string,
+  attireFilter: string,
+  searchFilter: string
+}
+
 export interface IAppStore {
   restaurants: IRestaurantObject[],
   currentPage: number,
@@ -24,7 +31,7 @@ export interface IAppStore {
   stateFilter: string,
   genreFilter: string,
   attireFilter: string,
-  searchFilter: ''
+  searchFilter: string
 };
 
 // ACTION CREATORS
