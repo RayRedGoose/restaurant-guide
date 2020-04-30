@@ -15,19 +15,24 @@ export interface IRestaurantObject {
   attire: string,
 };
 
-
 export interface IAppStore {
   restaurants: IRestaurantObject[],
   currentPage: number,
-  maxPages: number
-}
+  maxPages: number,
+  genres: string[],
+  attires: string[],
+  stateFilter: string,
+  genreFilter: string,
+  attireFilter: string,
+  searchFilter: ''
+};
 
 // ACTION CREATORS
 
 export interface IActionObject {
   type: string,
   [key: string]: any
-}
+};
 
 export interface IAddRestaurantAction {
   type: 'ADD_RESTAURANTS',
@@ -39,7 +44,7 @@ export interface IChangeCurrentPageAction {
   changer: number
 };
 
-export interface IAddMaxPages {
+export interface IAddMaxPagesAction {
   type: 'ADD_MAX_PAGES',
   total: number
 };
