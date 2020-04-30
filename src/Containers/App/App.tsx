@@ -2,21 +2,30 @@ import './App.scss';
 import React, { useEffect, useState } from 'react';
 import { useDispatch } from 'react-redux';
 import { IRestaurantObject } from 'assets/ts/interfaces';
-import { sortByAlphabet } from '_utils';
+import { sortByAlphabet, getGenres, getAttire } from '_utils';
 import { getRestaurants } from '_apiCalls/apiCalls';
-import { addRestaurants, addMaxPages } from 'redux_utils/actions';
+import { addRestaurants, addMaxPages, addGenres, addAttires } from 'redux_utils/actions';
 import RestaurantContainer from 'Containers/RestaurantContainer/RestaurantContainer';
+import SortingPanel from 'Components/SortingPanel/SortingPanel';
 
 const App: React.FC = () => {
   const dispatch = useDispatch();
   const [ error, setError ] = useState<string>('');
   const [ loaded, setLoaded ] = useState<boolean>(false);
 
+  const addInfoToStore = (restaurants: IRestaurantObject[]): void => {
+    const genres: string[] = getGenres(restaurants);
+    dispatch(addGenres(genres));
+    const attires: string[] = getAttire(restaurants);
+    dispatch(addAttires(attires));
+  }
+
   const addToStore = (restaurants: IRestaurantObject[]): void => {
     const restaurantsSorted = sortByAlphabet(restaurants);
     dispatch(addRestaurants(restaurantsSorted));
     dispatch(addMaxPages(restaurants.length));
     setLoaded(true);
+    addInfoToStore(restaurantsSorted);
   }
 
   const fetchRestaurants = async (): Promise<void> => {
