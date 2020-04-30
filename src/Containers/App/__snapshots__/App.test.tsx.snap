@@ -8,6 +8,31 @@ Object {
       <div
         class="app"
       >
+        <header
+          class="sorting-panel"
+        >
+          <section
+            class="filter"
+          >
+            <h3>
+              all states
+            </h3>
+          </section>
+          <section
+            class="filter"
+          >
+            <h3>
+              all genres
+            </h3>
+          </section>
+          <section
+            class="filter"
+          >
+            <h3>
+              all attires
+            </h3>
+          </section>
+        </header>
         <main
           class="restaurants-container"
         >
@@ -83,6 +108,31 @@ Object {
     <div
       class="app"
     >
+      <header
+        class="sorting-panel"
+      >
+        <section
+          class="filter"
+        >
+          <h3>
+            all states
+          </h3>
+        </section>
+        <section
+          class="filter"
+        >
+          <h3>
+            all genres
+          </h3>
+        </section>
+        <section
+          class="filter"
+        >
+          <h3>
+            all attires
+          </h3>
+        </section>
+      </header>
       <main
         class="restaurants-container"
       >
@@ -215,6 +265,31 @@ Object {
       <div
         class="app"
       >
+        <header
+          class="sorting-panel"
+        >
+          <section
+            class="filter"
+          >
+            <h3>
+              all states
+            </h3>
+          </section>
+          <section
+            class="filter"
+          >
+            <h3>
+              all genres
+            </h3>
+          </section>
+          <section
+            class="filter"
+          >
+            <h3>
+              all attires
+            </h3>
+          </section>
+        </header>
         <p>
           Fetch failed!
         </p>
@@ -225,6 +300,31 @@ Object {
     <div
       class="app"
     >
+      <header
+        class="sorting-panel"
+      >
+        <section
+          class="filter"
+        >
+          <h3>
+            all states
+          </h3>
+        </section>
+        <section
+          class="filter"
+        >
+          <h3>
+            all genres
+          </h3>
+        </section>
+        <section
+          class="filter"
+        >
+          <h3>
+            all attires
+          </h3>
+        </section>
+      </header>
       <p>
         Fetch failed!
       </p>
@@ -292,6 +392,31 @@ Object {
       <div
         class="app"
       >
+        <header
+          class="sorting-panel"
+        >
+          <section
+            class="filter"
+          >
+            <h3>
+              all states
+            </h3>
+          </section>
+          <section
+            class="filter"
+          >
+            <h3>
+              all genres
+            </h3>
+          </section>
+          <section
+            class="filter"
+          >
+            <h3>
+              all attires
+            </h3>
+          </section>
+        </header>
         <p>
           Loading ...
         </p>
@@ -302,6 +427,31 @@ Object {
     <div
       class="app"
     >
+      <header
+        class="sorting-panel"
+      >
+        <section
+          class="filter"
+        >
+          <h3>
+            all states
+          </h3>
+        </section>
+        <section
+          class="filter"
+        >
+          <h3>
+            all genres
+          </h3>
+        </section>
+        <section
+          class="filter"
+        >
+          <h3>
+            all attires
+          </h3>
+        </section>
+      </header>
       <p>
         Loading ...
       </p>
