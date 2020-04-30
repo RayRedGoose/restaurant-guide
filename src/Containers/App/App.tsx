@@ -45,6 +45,7 @@ const App: React.FC = () => {
 
   return (
     <div className="app">
+      <SortingPanel />
       { !loaded && error === '' && <p>Loading ...</p> }
       { loaded && error === '' && <RestaurantContainer />}
       { error !== '' && <p>{ error }</p> }
