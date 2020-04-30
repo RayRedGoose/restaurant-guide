@@ -1,36 +1,55 @@
 import './RestaurantContainer.scss';
 import React, { useState, useEffect } from 'react';
 import { useSelector } from 'react-redux';
-import { IAppStore, IRestaurantObject } from 'assets/ts/interfaces';
+import { applyFilters, checkEmptyFilters } from '_utils';
+import { IAppStore, IRestaurantObject, IFilters } from 'assets/ts/interfaces';
 import RestaurantCard from 'Components/RestaurantCard/RestaurantCard';
 import Pagination from 'Containers/Pagination/Pagination';
 
 const RestaurantContainer: React.FC = () => {
-  const { restaurants, currentPage } = useSelector((store: IAppStore) => ({
-    restaurants: store.restaurants,
-    currentPage: store.currentPage
-  }));
+  const {
+    restaurants,
+    currentPage,
+    stateFilter,
+    genreFilter,
+    attireFilter,
+    searchFilter,
+  } = useSelector((store: IAppStore) => store);
 
-  const [ displayed, setDisplayed ] = useState<IRestaurantObject[]>([]);
+  const filters: IFilters = {
+    stateFilter,
+    genreFilter,
+    attireFilter,
+    searchFilter,
+  };
+
+  const [displayed, setDisplayed] = useState<IRestaurantObject[]>([]);
 
   const shortDisplayed = (): void => {
-    const increment: number = 10*currentPage;
+    const increment: number = 10 * currentPage;
     const shorted: IRestaurantObject[] = restaurants
-      .slice(0 + increment, 9+increment);
+      .slice(0 + increment, 9 + increment);
     setDisplayed(shorted);
   };
 
-  useEffect(shortDisplayed, [ currentPage ]);
+  useEffect(shortDisplayed, [currentPage]);
 
-  const restaurantCards: JSX.Element[] = displayed
+  const filterRestaurants = (): IRestaurantObject[] => applyFilters(restaurants, filters);
+  const checkResult = checkEmptyFilters(filters);
+
+  const usedRestaurants: IRestaurantObject[] = (checkResult)
+    ? filterRestaurants()
+    : displayed;
+
+  const restaurantCards: JSX.Element[] = usedRestaurants
     .map((rest: IRestaurantObject, ind: number) => (
-      <RestaurantCard key={'restaurant' + ind} restaurant={rest} />
+      <RestaurantCard key={`restaurant${ind}`} restaurant={rest} />
     ));
 
   return (
     <main className="restaurants-container">
       { restaurantCards }
-      <Pagination />
+      { !checkResult && <Pagination /> }
     </main>
   );
 };
