@@ -48,3 +48,49 @@ export interface IAddMaxPagesAction {
   type: 'ADD_MAX_PAGES',
   total: number
 };
+
+export interface IAddGenresAction {
+  type: 'ADD_GENRES',
+  genres: string[]
+};
+
+export interface IAddAttiresAction {
+  type: 'ADD_ATTIRES',
+  attires: string[]
+};
+
+export interface IAddStateFilterAction {
+  type: 'ADD_STATE_FILTER',
+  state: string
+};
+
+export interface IRemoveStateFilterAction {
+  type: 'REMOVE_STATE_FILTER'
+};
+
+export interface IAddGenreFilterAction {
+  type: 'ADD_GENRE_FILTER',
+  genre: string
+};
+
+export interface IRemoveGenreFilterAction {
+  type: 'REMOVE_GENRE_FILTER'
+};
+
+export interface IAddAttireFilterAction {
+  type: 'ADD_ATTIRE_FILTER',
+  attire: string
+};
+
+export interface IRemoveAttireFilterAction {
+  type: 'REMOVE_ATTIRE_FILTER'
+};
+
+export interface IAddSearchFilterAction {
+  type: 'ADD_SEARCH_FILTER',
+  search: string
+};
+
+export interface IRemoveSearchFilterAction {
+  type: 'REMOVE_SEARCH_FILTER'
+};
