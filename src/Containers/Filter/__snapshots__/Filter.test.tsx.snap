@@ -1,0 +1,37 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Filter should match the snapshot if type is attires 1`] = `
+<section
+  className="filter"
+>
+  <h3
+    onClick={[Function]}
+  >
+    all attires
+  </h3>
+</section>
+`;
+
+exports[`Filter should match the snapshot if type is genres 1`] = `
+<section
+  className="filter"
+>
+  <h3
+    onClick={[Function]}
+  >
+    all genres
+  </h3>
+</section>
+`;
+
+exports[`Filter should match the snapshot if type is states 1`] = `
+<section
+  className="filter"
+>
+  <h3
+    onClick={[Function]}
+  >
+    all states
+  </h3>
+</section>
+`;
