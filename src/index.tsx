@@ -10,8 +10,9 @@ import { Store, createStore } from 'redux';
 import { composeWithDevTools } from 'redux-devtools-extension';
 import rootReducer from './redux_utils/reducers';
 import { CookiesProvider } from 'react-cookie';
+import { IAppStore } from 'assets/ts/interfaces';
 
-const store: Store<Object> = createStore(rootReducer, composeWithDevTools());
+const store: Store<IAppStore> = createStore(rootReducer, composeWithDevTools());
 
 const app = (
   <Provider store={store}>
