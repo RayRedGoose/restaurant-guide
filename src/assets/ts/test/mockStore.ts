@@ -7,7 +7,13 @@ mockRestaurants[9] = mockRestaurantAdditional;
 const mockStore: IAppStore = {
   restaurants: mockRestaurants,
   currentPage: 0,
-  maxPages: 3
+  maxPages: 3,
+  genres: ['american'],
+  attires: ['casual'],
+  stateFilter: '',
+  genreFilter: '',
+  attireFilter: '',
+  searchFilter: ''
 };
 
 export default mockStore;
