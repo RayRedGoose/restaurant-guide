@@ -5,10 +5,10 @@ import SearchForm from 'Containers/SearchForm/SearchForm';
 
 const SortingPanel: React.FC = () => (
   <header className="sorting-panel">
-    <SearchForm />
     <Filter type="states" />
     <Filter type="genres" />
     <Filter type="attires" />
+    <SearchForm />
   </header>
 );
 
