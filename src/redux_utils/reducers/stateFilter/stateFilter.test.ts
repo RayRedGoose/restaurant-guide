@@ -2,7 +2,8 @@ import stateFilterReducer from './stateFilter';
 import {
   IActionObject,
   IAddStateFilterAction,
-  IRemoveStateFilterAction
+  IRemoveStateFilterAction,
+  IRemoveAllFiltersAction
 } from 'assets/ts/interfaces';
 
 describe('stateFilterReducer', () => {
@@ -33,6 +34,18 @@ describe('stateFilterReducer', () => {
   it("should return empty string if type of action is REMOVE_STATE_FILTER", () => {
     const mockAction: IRemoveStateFilterAction = {
       type: 'REMOVE_STATE_FILTER'
+    };
+
+    const expected: string = '';
+
+    const result = stateFilterReducer('CO', mockAction);
+
+    expect(result).toEqual(expected);
+  });
+
+  it("should return empty string if type of action is REMOVE_ALL_FILTERS", () => {
+    const mockAction: IRemoveAllFiltersAction = {
+      type: 'REMOVE_ALL_FILTERS'
     };
 
     const expected: string = '';
