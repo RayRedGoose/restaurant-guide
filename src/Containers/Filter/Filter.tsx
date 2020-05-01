@@ -26,20 +26,24 @@ const Filter: React.FC<Props> = ({ type }) => {
   const initialText: string = 'all ' + type;
   const [ active, setActive ] = useState<string>(initialText);
   const [ isClicked, setIsClicked ] = useState<boolean>(false);
-  const { genres, attires, searchFilter } = useSelector((store: IAppStore) => ({
+  const { genres, attires, attireFilter, genreFilter, stateFilter } = useSelector((store: IAppStore) => ({
     genres: store.genres,
     attires: store.attires,
-    searchFilter: store.searchFilter
+    attireFilter: store.attireFilter,
+    genreFilter: store.genreFilter,
+    stateFilter: store.stateFilter,
   }));
-
-  useEffect(() => {
-    setActive(initialText);
-  }, [ searchFilter, initialText ])
 
   const lists: Lists = {
     states: states,
     genres: genres,
     attires: attires
+  };
+
+  const filters = {
+    states: stateFilter,
+    genres: genreFilter,
+    attires: attireFilter
   };
 
   const toggleList = () => setIsClicked(!isClicked);
@@ -69,6 +73,12 @@ const Filter: React.FC<Props> = ({ type }) => {
     if (type === 'attires') dispatch(removeAttireFilter());
     setIsClicked(false);
   };
+
+  const changeTitle = (): void => {
+    if (filters[type] === '') setActive(initialText);
+  }
+
+  useEffect(changeTitle, [ attireFilter, genreFilter, stateFilter ]);
 
   return (
     <section className="filter">
