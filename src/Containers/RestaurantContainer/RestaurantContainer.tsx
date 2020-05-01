@@ -3,8 +3,9 @@ import React, { useState, useEffect } from 'react';
 import { useSelector } from 'react-redux';
 import { applyFilters, checkEmptyFilters } from '_utils';
 import { IAppStore, IRestaurantObject, IFilters } from 'assets/ts/interfaces';
-import RestaurantCard from 'Components/RestaurantCard/RestaurantCard';
+import RestaurantCard from 'Containers/RestaurantCard/RestaurantCard';
 import Pagination from 'Containers/Pagination/Pagination';
+import NoCard from 'Components/NoCard/NoCard';
 
 const RestaurantContainer: React.FC = () => {
   const {
@@ -48,6 +49,7 @@ const RestaurantContainer: React.FC = () => {
 
   return (
     <main className="restaurants-container">
+      { !usedRestaurants.length && <NoCard /> }
       { restaurantCards }
       { !checkResult && <Pagination /> }
     </main>
