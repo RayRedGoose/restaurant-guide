@@ -157,4 +157,14 @@ describe("Filter", () => {
 
     expect(result).toEqual(expected);
   });
+
+  it("should return object with a type of REMOVE_ALL_FILTERS when removeAllFilters is called", () => {
+    const expected: I.IRemoveAllFiltersAction = {
+      type: 'REMOVE_ALL_FILTERS'
+    };
+
+    const result = actions.removeAllFilters();
+
+    expect(result).toEqual(expected);
+  });
 });
