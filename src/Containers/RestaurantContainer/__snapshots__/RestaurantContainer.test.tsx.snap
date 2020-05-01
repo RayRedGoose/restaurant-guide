@@ -11,39 +11,39 @@ Object {
         <section
           class="restaurant-card"
         >
+          <header>
+            <p
+              class="genre"
+            >
+              Steak
+            </p>
+            <p
+              class="genre"
+            >
+              American
+            </p>
+            <p
+              class="genre"
+            >
+              Contemporary
+            </p>
+            <p
+              class="genre"
+            >
+              Seafood
+            </p>
+            <p
+              class="genre"
+            >
+              Cafe
+            </p>
+          </header>
           <section
             class="card-description"
           >
             <h2>
               Old Hickory Steakhouse
             </h2>
-            <main>
-              <p
-                class="genre"
-              >
-                Steak
-              </p>
-              <p
-                class="genre"
-              >
-                American
-              </p>
-              <p
-                class="genre"
-              >
-                Contemporary
-              </p>
-              <p
-                class="genre"
-              >
-                Seafood
-              </p>
-              <p
-                class="genre"
-              >
-                Cafe
-              </p>
-            </main>
           </section>
           <section
             class="card-information"
@@ -82,39 +82,39 @@ Object {
       <section
         class="restaurant-card"
       >
+        <header>
+          <p
+            class="genre"
+          >
+            Steak
+          </p>
+          <p
+            class="genre"
+          >
+            American
+          </p>
+          <p
+            class="genre"
+          >
+            Contemporary
+          </p>
+          <p
+            class="genre"
+          >
+            Seafood
+          </p>
+          <p
+            class="genre"
+          >
+            Cafe
+          </p>
+        </header>
         <section
           class="card-description"
         >
           <h2>
             Old Hickory Steakhouse
           </h2>
-          <main>
-            <p
-              class="genre"
-            >
-              Steak
-            </p>
-            <p
-              class="genre"
-            >
-              American
-            </p>
-            <p
-              class="genre"
-            >
-              Contemporary
-            </p>
-            <p
-              class="genre"
-            >
-              Seafood
-            </p>
-            <p
-              class="genre"
-            >
-              Cafe
-            </p>
-          </main>
         </section>
         <section
           class="card-information"
@@ -210,39 +210,39 @@ Object {
         <section
           class="restaurant-card"
         >
+          <header>
+            <p
+              class="genre"
+            >
+              Steak
+            </p>
+            <p
+              class="genre"
+            >
+              American
+            </p>
+            <p
+              class="genre"
+            >
+              Contemporary
+            </p>
+            <p
+              class="genre"
+            >
+              Seafood
+            </p>
+            <p
+              class="genre"
+            >
+              Cafe
+            </p>
+          </header>
           <section
             class="card-description"
           >
             <h2>
               Old Hickory Steakhouse
             </h2>
-            <main>
-              <p
-                class="genre"
-              >
-                Steak
-              </p>
-              <p
-                class="genre"
-              >
-                American
-              </p>
-              <p
-                class="genre"
-              >
-                Contemporary
-              </p>
-              <p
-                class="genre"
-              >
-                Seafood
-              </p>
-              <p
-                class="genre"
-              >
-                Cafe
-              </p>
-            </main>
           </section>
           <section
             class="card-information"
@@ -262,39 +262,39 @@ Object {
         <section
           class="restaurant-card"
         >
+          <header>
+            <p
+              class="genre"
+            >
+              Japanese
+            </p>
+            <p
+              class="genre"
+            >
+              Sushi
+            </p>
+            <p
+              class="genre"
+            >
+              Asian
+            </p>
+            <p
+              class="genre"
+            >
+              Contemporary
+            </p>
+            <p
+              class="genre"
+            >
+              Seafood
+            </p>
+          </header>
           <section
             class="card-description"
           >
             <h2>
               Matsuhisa
             </h2>
-            <main>
-              <p
-                class="genre"
-              >
-                Japanese
-              </p>
-              <p
-                class="genre"
-              >
-                Sushi
-              </p>
-              <p
-                class="genre"
-              >
-                Asian
-              </p>
-              <p
-                class="genre"
-              >
-                Contemporary
-              </p>
-              <p
-                class="genre"
-              >
-                Seafood
-              </p>
-            </main>
           </section>
           <section
             class="card-information"
@@ -321,39 +321,39 @@ Object {
       <section
         class="restaurant-card"
       >
+        <header>
+          <p
+            class="genre"
+          >
+            Steak
+          </p>
+          <p
+            class="genre"
+          >
+            American
+          </p>
+          <p
+            class="genre"
+          >
+            Contemporary
+          </p>
+          <p
+            class="genre"
+          >
+            Seafood
+          </p>
+          <p
+            class="genre"
+          >
+            Cafe
+          </p>
+        </header>
         <section
           class="card-description"
         >
           <h2>
             Old Hickory Steakhouse
           </h2>
-          <main>
-            <p
-              class="genre"
-            >
-              Steak
-            </p>
-            <p
-              class="genre"
-            >
-              American
-            </p>
-            <p
-              class="genre"
-            >
-              Contemporary
-            </p>
-            <p
-              class="genre"
-            >
-              Seafood
-            </p>
-            <p
-              class="genre"
-            >
-              Cafe
-            </p>
-          </main>
         </section>
         <section
           class="card-information"
@@ -373,39 +373,39 @@ Object {
       <section
         class="restaurant-card"
       >
+        <header>
+          <p
+            class="genre"
+          >
+            Japanese
+          </p>
+          <p
+            class="genre"
+          >
+            Sushi
+          </p>
+          <p
+            class="genre"
+          >
+            Asian
+          </p>
+          <p
+            class="genre"
+          >
+            Contemporary
+          </p>
+          <p
+            class="genre"
+          >
+            Seafood
+          </p>
+        </header>
         <section
           class="card-description"
         >
           <h2>
             Matsuhisa
           </h2>
-          <main>
-            <p
-              class="genre"
-            >
-              Japanese
-            </p>
-            <p
-              class="genre"
-            >
-              Sushi
-            </p>
-            <p
-              class="genre"
-            >
-              Asian
-            </p>
-            <p
-              class="genre"
-            >
-              Contemporary
-            </p>
-            <p
-              class="genre"
-            >
-              Seafood
-            </p>
-          </main>
         </section>
         <section
           class="card-information"
