@@ -1,5 +1,4 @@
 [![Build Status](https://travis-ci.com/RayRedGoose/restaurant-guide.svg?branch=master)](https://travis-ci.com/RayRedGoose/restaurant-guide)
-<br />
 
 # Restaurant Guide
 
