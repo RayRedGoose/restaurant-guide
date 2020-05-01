@@ -6,6 +6,8 @@ const stateFilter = (state = '', action: IActionObject) => {
       return action.state;
     case 'REMOVE_STATE_FILTER':
       return '';
+    case 'REMOVE_ALL_FILTERS':
+      return '';
     default:
       return state;
   }
