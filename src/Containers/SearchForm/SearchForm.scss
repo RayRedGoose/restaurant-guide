@@ -1,0 +1,32 @@
+@import "../../assets/css/variables.scss";
+@import "../../assets/css/index.scss";
+
+.search-form {
+  display: flex;
+  width: 40%;
+  &>* {
+    padding: 0.3em 1em;
+  }
+  input[type="text"] {
+    border-bottom: 2px solid $box-color;
+    margin-right: -1rem;
+    width: 100%;
+  }
+  input[type="submit"] {
+    @extend %reg-button;
+  }
+  button {
+    border: 2px solid $error-color;
+    border-radius: 1rem;
+    color: $error-color;
+    margin-left: 1rem;
+    &:hover {
+      background-color: darken($error-color, 15%);
+      color: $background-color;
+    }
+    &:active {
+      background-color: lighten($error-color, 2%);
+      color: $background-color;
+    }
+  }
+}
