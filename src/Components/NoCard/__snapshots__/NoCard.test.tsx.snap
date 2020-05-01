@@ -1,0 +1,15 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`should match the snapshot 1`] = `
+<section
+  className="no-card"
+>
+  <img
+    alt="cafe"
+    src="cafe.svg"
+  />
+  <h2>
+    No restaurant to display!
+  </h2>
+</section>
+`;
