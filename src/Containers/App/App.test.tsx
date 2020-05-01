@@ -93,7 +93,7 @@ describe('App component', () => {
   describe("Tests for sad result of fetching", () => {
     it('should match the snapshot while fetch is failed', async() => {
       (getRestaurants as jest.Mock).mockImplementation(() => {
-        return Promise.reject('Fetch failed!');
+        return Promise.reject(Error('Fetch failed!'));
       });
 
       await act(async () => {

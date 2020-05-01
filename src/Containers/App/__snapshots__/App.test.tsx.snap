@@ -11,15 +11,6 @@ Object {
         <header
           class="sorting-panel"
         >
-          <form>
-            <input
-              type="text"
-              value=""
-            />
-            <button>
-              Search
-            </button>
-          </form>
           <section
             class="filter"
           >
@@ -41,6 +32,24 @@ Object {
               all attires
             </h3>
           </section>
+          <form
+            class="search-form"
+          >
+            <input
+              placeholder="Search"
+              type="text"
+              value=""
+            />
+            <input
+              type="submit"
+              value="Search"
+            />
+            <button
+              class="clean-filters"
+            >
+              Clean
+            </button>
+          </form>
         </header>
         <main
           class="restaurants-container"
@@ -48,122 +57,7 @@ Object {
           <section
             class="restaurant-card"
           >
-            <section
-              class="card-description"
-            >
-              <h2>
-                Old Hickory Steakhouse
-              </h2>
-              <main>
-                <p
-                  class="genre"
-                >
-                  Steak
-                </p>
-                <p
-                  class="genre"
-                >
-                  American
-                </p>
-                <p
-                  class="genre"
-                >
-                  Contemporary
-                </p>
-                <p
-                  class="genre"
-                >
-                  Seafood
-                </p>
-                <p
-                  class="genre"
-                >
-                  Cafe
-                </p>
-              </main>
-            </section>
-            <section
-              class="card-information"
-            >
-              <p
-                class="location"
-              >
-                Oxon Hill, MD
-              </p>
-              <p
-                class="phone"
-              >
-                (301) 965-4000
-              </p>
-            </section>
-          </section>
-          <footer>
-            <p
-              class="pages"
-            >
-              1 / 3
-            </p>
-            <button
-              id="next-page-btn"
-            >
-               + 
-            </button>
-          </footer>
-        </main>
-      </div>
-    </div>
-  </body>,
-  "container": <div>
-    <div
-      class="app"
-    >
-      <header
-        class="sorting-panel"
-      >
-        <form>
-          <input
-            type="text"
-            value=""
-          />
-          <button>
-            Search
-          </button>
-        </form>
-        <section
-          class="filter"
-        >
-          <h3>
-            all states
-          </h3>
-        </section>
-        <section
-          class="filter"
-        >
-          <h3>
-            all genres
-          </h3>
-        </section>
-        <section
-          class="filter"
-        >
-          <h3>
-            all attires
-          </h3>
-        </section>
-      </header>
-      <main
-        class="restaurants-container"
-      >
-        <section
-          class="restaurant-card"
-        >
-          <section
-            class="card-description"
-          >
-            <h2>
-              Old Hickory Steakhouse
-            </h2>
-            <main>
+            <header>
               <p
                 class="genre"
               >
@@ -189,7 +83,133 @@ Object {
               >
                 Cafe
               </p>
-            </main>
+            </header>
+            <section
+              class="card-description"
+            >
+              <h2>
+                Old Hickory Steakhouse
+              </h2>
+            </section>
+            <section
+              class="card-information"
+            >
+              <p
+                class="location"
+              >
+                Oxon Hill, MD
+              </p>
+              <p
+                class="phone"
+              >
+                (301) 965-4000
+              </p>
+            </section>
+          </section>
+          <footer
+            class="pagination"
+          >
+            <p
+              class="pages"
+            >
+              1 / 3
+            </p>
+            <button
+              id="next-page-btn"
+            >
+               next page 
+            </button>
+          </footer>
+        </main>
+      </div>
+    </div>
+  </body>,
+  "container": <div>
+    <div
+      class="app"
+    >
+      <header
+        class="sorting-panel"
+      >
+        <section
+          class="filter"
+        >
+          <h3>
+            all states
+          </h3>
+        </section>
+        <section
+          class="filter"
+        >
+          <h3>
+            all genres
+          </h3>
+        </section>
+        <section
+          class="filter"
+        >
+          <h3>
+            all attires
+          </h3>
+        </section>
+        <form
+          class="search-form"
+        >
+          <input
+            placeholder="Search"
+            type="text"
+            value=""
+          />
+          <input
+            type="submit"
+            value="Search"
+          />
+          <button
+            class="clean-filters"
+          >
+            Clean
+          </button>
+        </form>
+      </header>
+      <main
+        class="restaurants-container"
+      >
+        <section
+          class="restaurant-card"
+        >
+          <header>
+            <p
+              class="genre"
+            >
+              Steak
+            </p>
+            <p
+              class="genre"
+            >
+              American
+            </p>
+            <p
+              class="genre"
+            >
+              Contemporary
+            </p>
+            <p
+              class="genre"
+            >
+              Seafood
+            </p>
+            <p
+              class="genre"
+            >
+              Cafe
+            </p>
+          </header>
+          <section
+            class="card-description"
+          >
+            <h2>
+              Old Hickory Steakhouse
+            </h2>
           </section>
           <section
             class="card-information"
@@ -206,7 +226,9 @@ Object {
             </p>
           </section>
         </section>
-        <footer>
+        <footer
+          class="pagination"
+        >
           <p
             class="pages"
           >
@@ -215,7 +237,7 @@ Object {
           <button
             id="next-page-btn"
           >
-             + 
+             next page 
           </button>
         </footer>
       </main>
@@ -286,15 +308,6 @@ Object {
         <header
           class="sorting-panel"
         >
-          <form>
-            <input
-              type="text"
-              value=""
-            />
-            <button>
-              Search
-            </button>
-          </form>
           <section
             class="filter"
           >
@@ -316,10 +329,36 @@ Object {
               all attires
             </h3>
           </section>
+          <form
+            class="search-form"
+          >
+            <input
+              placeholder="Search"
+              type="text"
+              value=""
+            />
+            <input
+              type="submit"
+              value="Search"
+            />
+            <button
+              class="clean-filters"
+            >
+              Clean
+            </button>
+          </form>
         </header>
-        <p>
-          Fetch failed!
-        </p>
+        <section
+          class="error-card"
+        >
+          <img
+            alt="error"
+            src="error.svg"
+          />
+          <h2>
+            Fetch failed!
+          </h2>
+        </section>
       </div>
     </div>
   </body>,
@@ -330,15 +369,6 @@ Object {
       <header
         class="sorting-panel"
       >
-        <form>
-          <input
-            type="text"
-            value=""
-          />
-          <button>
-            Search
-          </button>
-        </form>
         <section
           class="filter"
         >
@@ -360,10 +390,36 @@ Object {
             all attires
           </h3>
         </section>
+        <form
+          class="search-form"
+        >
+          <input
+            placeholder="Search"
+            type="text"
+            value=""
+          />
+          <input
+            type="submit"
+            value="Search"
+          />
+          <button
+            class="clean-filters"
+          >
+            Clean
+          </button>
+        </form>
       </header>
-      <p>
-        Fetch failed!
-      </p>
+      <section
+        class="error-card"
+      >
+        <img
+          alt="error"
+          src="error.svg"
+        />
+        <h2>
+          Fetch failed!
+        </h2>
+      </section>
     </div>
   </div>,
   "debug": [Function],
@@ -431,15 +487,6 @@ Object {
         <header
           class="sorting-panel"
         >
-          <form>
-            <input
-              type="text"
-              value=""
-            />
-            <button>
-              Search
-            </button>
-          </form>
           <section
             class="filter"
           >
@@ -461,10 +508,36 @@ Object {
               all attires
             </h3>
           </section>
+          <form
+            class="search-form"
+          >
+            <input
+              placeholder="Search"
+              type="text"
+              value=""
+            />
+            <input
+              type="submit"
+              value="Search"
+            />
+            <button
+              class="clean-filters"
+            >
+              Clean
+            </button>
+          </form>
         </header>
-        <p>
-          Loading ...
-        </p>
+        <section
+          class="loading"
+        >
+          <img
+            alt="loading"
+            src="loading.svg"
+          />
+          <h2>
+            Loading...
+          </h2>
+        </section>
       </div>
     </div>
   </body>,
@@ -475,15 +548,6 @@ Object {
       <header
         class="sorting-panel"
       >
-        <form>
-          <input
-            type="text"
-            value=""
-          />
-          <button>
-            Search
-          </button>
-        </form>
         <section
           class="filter"
         >
@@ -505,10 +569,36 @@ Object {
             all attires
           </h3>
         </section>
+        <form
+          class="search-form"
+        >
+          <input
+            placeholder="Search"
+            type="text"
+            value=""
+          />
+          <input
+            type="submit"
+            value="Search"
+          />
+          <button
+            class="clean-filters"
+          >
+            Clean
+          </button>
+        </form>
       </header>
-      <p>
-        Loading ...
-      </p>
+      <section
+        class="loading"
+      >
+        <img
+          alt="loading"
+          src="loading.svg"
+        />
+        <h2>
+          Loading...
+        </h2>
+      </section>
     </div>
   </div>,
   "debug": [Function],
