@@ -1,0 +1,35 @@
+@import url('https://fonts.googleapis.com/css?family=Lato:300,400,700|Patrick+Hand&display=swap');
+@import "./variables.scss";
+
+:root {
+  font-family: $base-font;
+  font-size: 18px;
+  color: $dark-color;
+}
+
+body {
+  background-color: $background-color;
+}
+
+h2 {
+  color: $accent-color;
+  font-family: $accent-font;
+  font-size: 2rem;
+  font-weight: 700;
+  letter-spacing: 0.05em;
+  margin: 1rem 0;
+}
+
+%reg-button {
+  background-color: $box-color;
+  border-radius: 1rem;
+  padding: 0.3em 1em;
+  &:hover {
+    background-color: darken($box-color, 15%);
+    box-shadow: 0px 0px 12px hsla(113, 37, 73, 0.6);
+  }
+  &:active {
+    background-color: lighten($box-color, 2%);
+    box-shadow: 0px 0px 12px hsla(113, 37, 73, 0.6);
+  }
+}
