@@ -10,7 +10,7 @@ import mockRestaurant from 'assets/ts/test/mockRestaurant';
 import App from './App';
 import { getRestaurants } from '_apiCalls/apiCalls';
 import { addRestaurants, addMaxPages, addGenres, addAttires } from 'redux_utils/actions';
-import { sortByAlphabet, getGenres, getAttire } from '_utils';
+import { getGenres, getAttire } from '_utils';
 
 jest.mock('_apiCalls/apiCalls');
 jest.mock('redux_utils/actions');

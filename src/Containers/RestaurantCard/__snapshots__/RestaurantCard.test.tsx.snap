@@ -1,0 +1,202 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`should match the snapshot if it's clicked 1`] = `
+<section
+  className="restaurant-card"
+  onClick={[Function]}
+>
+  <header>
+    <p
+      className="genre"
+      key="Steak0"
+    >
+      Steak
+    </p>
+    <p
+      className="genre"
+      key="American1"
+    >
+      American
+    </p>
+    <p
+      className="genre"
+      key="Contemporary2"
+    >
+      Contemporary
+    </p>
+    <p
+      className="genre"
+      key="Seafood3"
+    >
+      Seafood
+    </p>
+    <p
+      className="genre"
+      key="Cafe4"
+    >
+      Cafe
+    </p>
+  </header>
+  <section
+    className="card-description"
+  >
+    <h2>
+      Old Hickory Steakhouse
+    </h2>
+    <a
+      href="http://www.gaylordnational.com"
+      rel="noopener noreferrer"
+      target="_blank"
+    >
+      See website
+    </a>
+  </section>
+  <section
+    className="card-information"
+  >
+    <p
+      className="phone"
+    >
+      (301) 965-4000
+    </p>
+  </section>
+  <footer
+    className="additional-info"
+  >
+    <p
+      id="open-hour"
+    >
+      <img
+        alt="open hours"
+        src="open.svg"
+      />
+      <span
+        key="hour0"
+      >
+        Open Daily 5:30 PM-10:00 PM
+      </span>
+    </p>
+    <p
+      id="attire-lines"
+    >
+      <img
+        alt="attire"
+        src="attire.svg"
+      />
+      <span
+        key="att0"
+      >
+        business
+      </span>
+      <span
+        key="att1"
+      >
+        casual
+      </span>
+    </p>
+    <p>
+      <img
+        alt="address"
+        src="address.svg"
+      />
+      <span>
+        201 Waterfront St
+      </span>
+      <span>
+        Oxon Hill, MD 20745
+      </span>
+    </p>
+    <p
+      id="tags"
+    >
+      <img
+        alt="tags"
+        src="tag.svg"
+      />
+      <div>
+        <span
+          key="tag0"
+        >
+          Social
+        </span>
+        <span
+          key="tag1"
+        >
+          Food and Dining
+        </span>
+        <span
+          key="tag2"
+        >
+          Restaurants
+        </span>
+        <span
+          key="tag3"
+        >
+          Steakhouses
+        </span>
+      </div>
+    </p>
+  </footer>
+</section>
+`;
+
+exports[`should match the snapshot if it's not clicked 1`] = `
+<section
+  className="restaurant-card"
+  onClick={[Function]}
+>
+  <header>
+    <p
+      className="genre"
+      key="Steak0"
+    >
+      Steak
+    </p>
+    <p
+      className="genre"
+      key="American1"
+    >
+      American
+    </p>
+    <p
+      className="genre"
+      key="Contemporary2"
+    >
+      Contemporary
+    </p>
+    <p
+      className="genre"
+      key="Seafood3"
+    >
+      Seafood
+    </p>
+    <p
+      className="genre"
+      key="Cafe4"
+    >
+      Cafe
+    </p>
+  </header>
+  <section
+    className="card-description"
+  >
+    <h2>
+      Old Hickory Steakhouse
+    </h2>
+  </section>
+  <section
+    className="card-information"
+  >
+    <p
+      className="location"
+    >
+      Oxon Hill, MD
+    </p>
+    <p
+      className="phone"
+    >
+      (301) 965-4000
+    </p>
+  </section>
+</section>
+`;

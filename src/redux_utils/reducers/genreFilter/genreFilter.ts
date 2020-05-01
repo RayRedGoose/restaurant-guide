@@ -6,6 +6,8 @@ const genreFilter = (state = '', action: IActionObject) => {
       return action.genre;
     case 'REMOVE_GENRE_FILTER':
       return '';
+    case 'REMOVE_ALL_FILTERS':
+      return '';
     default:
       return state;
   }

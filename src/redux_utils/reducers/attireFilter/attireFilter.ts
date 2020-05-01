@@ -6,6 +6,8 @@ const attireFilter = (state = '', action: IActionObject) => {
       return action.attire;
     case 'REMOVE_ATTIRE_FILTER':
       return '';
+    case 'REMOVE_ALL_FILTERS':
+      return '';
     default:
       return state;
   }

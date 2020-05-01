@@ -3,15 +3,24 @@
 exports[`SearchForm should match the snapshot 1`] = `
 <SearchForm>
   <form
+    className="search-form"
     onSubmit={[Function]}
   >
     <input
       onChange={[Function]}
+      placeholder="Search"
       type="text"
       value=""
     />
-    <button>
-      Search
+    <input
+      type="submit"
+      value="Search"
+    />
+    <button
+      className="clean-filters"
+      onClick={[Function]}
+    >
+      Clean
     </button>
   </form>
 </SearchForm>

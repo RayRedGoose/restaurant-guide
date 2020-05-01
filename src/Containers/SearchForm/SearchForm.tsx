@@ -1,6 +1,7 @@
+import './SearchForm.scss';
 import React, { useState, FormEvent, ChangeEvent } from 'react';
 import { useDispatch } from 'react-redux';
-import { addSearchFilter, removeSearchFilter } from 'redux_utils/actions';
+import { addSearchFilter, removeSearchFilter, removeAllFilters } from 'redux_utils/actions';
 
 const SearchForm: React.FC = () => {
   const dispatch = useDispatch();
@@ -16,10 +17,16 @@ const SearchForm: React.FC = () => {
     if (e.target.value === '') dispatch(removeSearchFilter());
   };
 
+  const cleanFilters = (): void => {
+    dispatch(removeAllFilters());
+    setQuery('');
+  }
+
   return (
-    <form onSubmit={submitSearch}>
-      <input type="text" value={query} onChange={handleChanges} />
-      <button>Search</button>
+    <form className="search-form" onSubmit={submitSearch}>
+      <input type="text" placeholder="Search" value={query} onChange={handleChanges} />
+      <input type="submit" value="Search" />
+      <button className="clean-filters" onClick={cleanFilters}>Clean</button>
     </form>
   );
 };

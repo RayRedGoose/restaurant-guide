@@ -101,3 +101,7 @@ export interface IAddSearchFilterAction {
 export interface IRemoveSearchFilterAction {
   type: 'REMOVE_SEARCH_FILTER'
 };
+
+export interface IRemoveAllFiltersAction {
+  type: 'REMOVE_ALL_FILTERS'
+};

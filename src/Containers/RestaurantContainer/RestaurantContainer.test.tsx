@@ -5,7 +5,7 @@
 import React from 'react';
 import mockStore from 'assets/ts/test/mockStore';
 import RestaurantContainer from './RestaurantContainer';
-import { render, act, RenderResult, getByText } from '@testing-library/react';
+import { render, act, RenderResult } from '@testing-library/react';
 
 const mockDispatch = jest.fn();
 let mockCurrentPage: number = 0;

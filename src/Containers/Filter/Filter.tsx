@@ -1,5 +1,5 @@
 import './Filter.scss';
-import React, { useState, MouseEvent } from 'react';
+import React, { useState, MouseEvent, useEffect } from 'react';
 import { useSelector, useDispatch } from 'react-redux';
 import states from 'assets/ts/states';
 import { IAppStore } from 'assets/ts/interfaces';
@@ -26,10 +26,15 @@ const Filter: React.FC<Props> = ({ type }) => {
   const initialText: string = 'all ' + type;
   const [ active, setActive ] = useState<string>(initialText);
   const [ isClicked, setIsClicked ] = useState<boolean>(false);
-  const { genres, attires } = useSelector((store: IAppStore) => ({
+  const { genres, attires, searchFilter } = useSelector((store: IAppStore) => ({
     genres: store.genres,
-    attires: store.attires
+    attires: store.attires,
+    searchFilter: store.searchFilter
   }));
+
+  useEffect(() => {
+    setActive(initialText);
+  }, [ searchFilter, initialText ])
 
   const lists: Lists = {
     states: states,
