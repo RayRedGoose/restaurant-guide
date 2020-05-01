@@ -11,24 +11,6 @@ Object {
         <header
           class="sorting-panel"
         >
-          <form
-            class="search-form"
-          >
-            <input
-              placeholder="Search"
-              type="text"
-              value=""
-            />
-            <input
-              type="submit"
-              value="Search"
-            />
-            <button
-              class="clean-filters"
-            >
-              Clean
-            </button>
-          </form>
           <section
             class="filter"
           >
@@ -50,6 +32,24 @@ Object {
               all attires
             </h3>
           </section>
+          <form
+            class="search-form"
+          >
+            <input
+              placeholder="Search"
+              type="text"
+              value=""
+            />
+            <input
+              type="submit"
+              value="Search"
+            />
+            <button
+              class="clean-filters"
+            >
+              Clean
+            </button>
+          </form>
         </header>
         <main
           class="restaurants-container"
@@ -106,7 +106,9 @@ Object {
               </p>
             </section>
           </section>
-          <footer>
+          <footer
+            class="pagination"
+          >
             <p
               class="pages"
             >
@@ -115,7 +117,7 @@ Object {
             <button
               id="next-page-btn"
             >
-               + 
+               next page 
             </button>
           </footer>
         </main>
@@ -129,24 +131,6 @@ Object {
       <header
         class="sorting-panel"
       >
-        <form
-          class="search-form"
-        >
-          <input
-            placeholder="Search"
-            type="text"
-            value=""
-          />
-          <input
-            type="submit"
-            value="Search"
-          />
-          <button
-            class="clean-filters"
-          >
-            Clean
-          </button>
-        </form>
         <section
           class="filter"
         >
@@ -168,6 +152,24 @@ Object {
             all attires
           </h3>
         </section>
+        <form
+          class="search-form"
+        >
+          <input
+            placeholder="Search"
+            type="text"
+            value=""
+          />
+          <input
+            type="submit"
+            value="Search"
+          />
+          <button
+            class="clean-filters"
+          >
+            Clean
+          </button>
+        </form>
       </header>
       <main
         class="restaurants-container"
@@ -224,7 +226,9 @@ Object {
             </p>
           </section>
         </section>
-        <footer>
+        <footer
+          class="pagination"
+        >
           <p
             class="pages"
           >
@@ -233,7 +237,7 @@ Object {
           <button
             id="next-page-btn"
           >
-             + 
+             next page 
           </button>
         </footer>
       </main>
@@ -304,24 +308,6 @@ Object {
         <header
           class="sorting-panel"
         >
-          <form
-            class="search-form"
-          >
-            <input
-              placeholder="Search"
-              type="text"
-              value=""
-            />
-            <input
-              type="submit"
-              value="Search"
-            />
-            <button
-              class="clean-filters"
-            >
-              Clean
-            </button>
-          </form>
           <section
             class="filter"
           >
@@ -343,6 +329,24 @@ Object {
               all attires
             </h3>
           </section>
+          <form
+            class="search-form"
+          >
+            <input
+              placeholder="Search"
+              type="text"
+              value=""
+            />
+            <input
+              type="submit"
+              value="Search"
+            />
+            <button
+              class="clean-filters"
+            >
+              Clean
+            </button>
+          </form>
         </header>
         <section
           class="error-card"
@@ -365,24 +369,6 @@ Object {
       <header
         class="sorting-panel"
       >
-        <form
-          class="search-form"
-        >
-          <input
-            placeholder="Search"
-            type="text"
-            value=""
-          />
-          <input
-            type="submit"
-            value="Search"
-          />
-          <button
-            class="clean-filters"
-          >
-            Clean
-          </button>
-        </form>
         <section
           class="filter"
         >
@@ -404,6 +390,24 @@ Object {
             all attires
           </h3>
         </section>
+        <form
+          class="search-form"
+        >
+          <input
+            placeholder="Search"
+            type="text"
+            value=""
+          />
+          <input
+            type="submit"
+            value="Search"
+          />
+          <button
+            class="clean-filters"
+          >
+            Clean
+          </button>
+        </form>
       </header>
       <section
         class="error-card"
@@ -483,24 +487,6 @@ Object {
         <header
           class="sorting-panel"
         >
-          <form
-            class="search-form"
-          >
-            <input
-              placeholder="Search"
-              type="text"
-              value=""
-            />
-            <input
-              type="submit"
-              value="Search"
-            />
-            <button
-              class="clean-filters"
-            >
-              Clean
-            </button>
-          </form>
           <section
             class="filter"
           >
@@ -522,6 +508,24 @@ Object {
               all attires
             </h3>
           </section>
+          <form
+            class="search-form"
+          >
+            <input
+              placeholder="Search"
+              type="text"
+              value=""
+            />
+            <input
+              type="submit"
+              value="Search"
+            />
+            <button
+              class="clean-filters"
+            >
+              Clean
+            </button>
+          </form>
         </header>
         <section
           class="loading"
@@ -544,24 +548,6 @@ Object {
       <header
         class="sorting-panel"
       >
-        <form
-          class="search-form"
-        >
-          <input
-            placeholder="Search"
-            type="text"
-            value=""
-          />
-          <input
-            type="submit"
-            value="Search"
-          />
-          <button
-            class="clean-filters"
-          >
-            Clean
-          </button>
-        </form>
         <section
           class="filter"
         >
@@ -583,6 +569,24 @@ Object {
             all attires
           </h3>
         </section>
+        <form
+          class="search-form"
+        >
+          <input
+            placeholder="Search"
+            type="text"
+            value=""
+          />
+          <input
+            type="submit"
+            value="Search"
+          />
+          <button
+            class="clean-filters"
+          >
+            Clean
+          </button>
+        </form>
       </header>
       <section
         class="loading"

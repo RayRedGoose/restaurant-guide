@@ -60,7 +60,9 @@ Object {
             </p>
           </section>
         </section>
-        <footer>
+        <footer
+          class="pagination"
+        >
           <p
             class="pages"
           >
@@ -69,7 +71,7 @@ Object {
           <button
             id="next-page-btn"
           >
-             + 
+             next page 
           </button>
         </footer>
       </main>
@@ -131,7 +133,9 @@ Object {
           </p>
         </section>
       </section>
-      <footer>
+      <footer
+        class="pagination"
+      >
         <p
           class="pages"
         >
@@ -140,7 +144,7 @@ Object {
         <button
           id="next-page-btn"
         >
-           + 
+           next page 
         </button>
       </footer>
     </main>
@@ -486,11 +490,24 @@ Object {
       <main
         class="restaurants-container"
       >
-        <footer>
+        <section
+          class="no-card"
+        >
+          <img
+            alt="cafe"
+            src="cafe.svg"
+          />
+          <h2>
+            No restaurant to display!
+          </h2>
+        </section>
+        <footer
+          class="pagination"
+        >
           <button
             id="prev-page-btn"
           >
-             - 
+             previous page 
           </button>
           <p
             class="pages"
@@ -500,7 +517,7 @@ Object {
           <button
             id="next-page-btn"
           >
-             + 
+             next page 
           </button>
         </footer>
       </main>
@@ -510,11 +527,24 @@ Object {
     <main
       class="restaurants-container"
     >
-      <footer>
+      <section
+        class="no-card"
+      >
+        <img
+          alt="cafe"
+          src="cafe.svg"
+        />
+        <h2>
+          No restaurant to display!
+        </h2>
+      </section>
+      <footer
+        class="pagination"
+      >
         <button
           id="prev-page-btn"
         >
-           - 
+           previous page 
         </button>
         <p
           class="pages"
@@ -524,7 +554,7 @@ Object {
         <button
           id="next-page-btn"
         >
-           + 
+           next page 
         </button>
       </footer>
     </main>
