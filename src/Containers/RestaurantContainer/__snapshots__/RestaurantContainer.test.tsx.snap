@@ -11,84 +11,7 @@ Object {
         <section
           class="restaurant-card"
         >
-          <section
-            class="card-description"
-          >
-            <h2>
-              Old Hickory Steakhouse
-            </h2>
-            <main>
-              <p
-                class="genre"
-              >
-                Steak
-              </p>
-              <p
-                class="genre"
-              >
-                American
-              </p>
-              <p
-                class="genre"
-              >
-                Contemporary
-              </p>
-              <p
-                class="genre"
-              >
-                Seafood
-              </p>
-              <p
-                class="genre"
-              >
-                Cafe
-              </p>
-            </main>
-          </section>
-          <section
-            class="card-information"
-          >
-            <p
-              class="location"
-            >
-              Oxon Hill, MD
-            </p>
-            <p
-              class="phone"
-            >
-              (301) 965-4000
-            </p>
-          </section>
-        </section>
-        <footer>
-          <p
-            class="pages"
-          >
-            1 / 3
-          </p>
-          <button
-            id="next-page-btn"
-          >
-             + 
-          </button>
-        </footer>
-      </main>
-    </div>
-  </body>,
-  "container": <div>
-    <main
-      class="restaurants-container"
-    >
-      <section
-        class="restaurant-card"
-      >
-        <section
-          class="card-description"
-        >
-          <h2>
-            Old Hickory Steakhouse
-          </h2>
-          <main>
+          <header>
             <p
               class="genre"
             >
@@ -114,7 +37,86 @@ Object {
             >
               Cafe
             </p>
-          </main>
+          </header>
+          <section
+            class="card-description"
+          >
+            <h2>
+              Old Hickory Steakhouse
+            </h2>
+          </section>
+          <section
+            class="card-information"
+          >
+            <p
+              class="location"
+            >
+              Oxon Hill, MD
+            </p>
+            <p
+              class="phone"
+            >
+              (301) 965-4000
+            </p>
+          </section>
+        </section>
+        <footer
+          class="pagination"
+        >
+          <p
+            class="pages"
+          >
+            1 / 3
+          </p>
+          <button
+            id="next-page-btn"
+          >
+             next page 
+          </button>
+        </footer>
+      </main>
+    </div>
+  </body>,
+  "container": <div>
+    <main
+      class="restaurants-container"
+    >
+      <section
+        class="restaurant-card"
+      >
+        <header>
+          <p
+            class="genre"
+          >
+            Steak
+          </p>
+          <p
+            class="genre"
+          >
+            American
+          </p>
+          <p
+            class="genre"
+          >
+            Contemporary
+          </p>
+          <p
+            class="genre"
+          >
+            Seafood
+          </p>
+          <p
+            class="genre"
+          >
+            Cafe
+          </p>
+        </header>
+        <section
+          class="card-description"
+        >
+          <h2>
+            Old Hickory Steakhouse
+          </h2>
         </section>
         <section
           class="card-information"
@@ -131,7 +133,9 @@ Object {
           </p>
         </section>
       </section>
-      <footer>
+      <footer
+        class="pagination"
+      >
         <p
           class="pages"
         >
@@ -140,7 +144,7 @@ Object {
         <button
           id="next-page-btn"
         >
-           + 
+           next page 
         </button>
       </footer>
     </main>
@@ -210,39 +214,39 @@ Object {
         <section
           class="restaurant-card"
         >
+          <header>
+            <p
+              class="genre"
+            >
+              Steak
+            </p>
+            <p
+              class="genre"
+            >
+              American
+            </p>
+            <p
+              class="genre"
+            >
+              Contemporary
+            </p>
+            <p
+              class="genre"
+            >
+              Seafood
+            </p>
+            <p
+              class="genre"
+            >
+              Cafe
+            </p>
+          </header>
           <section
             class="card-description"
           >
             <h2>
               Old Hickory Steakhouse
             </h2>
-            <main>
-              <p
-                class="genre"
-              >
-                Steak
-              </p>
-              <p
-                class="genre"
-              >
-                American
-              </p>
-              <p
-                class="genre"
-              >
-                Contemporary
-              </p>
-              <p
-                class="genre"
-              >
-                Seafood
-              </p>
-              <p
-                class="genre"
-              >
-                Cafe
-              </p>
-            </main>
           </section>
           <section
             class="card-information"
@@ -262,39 +266,39 @@ Object {
         <section
           class="restaurant-card"
         >
+          <header>
+            <p
+              class="genre"
+            >
+              Japanese
+            </p>
+            <p
+              class="genre"
+            >
+              Sushi
+            </p>
+            <p
+              class="genre"
+            >
+              Asian
+            </p>
+            <p
+              class="genre"
+            >
+              Contemporary
+            </p>
+            <p
+              class="genre"
+            >
+              Seafood
+            </p>
+          </header>
           <section
             class="card-description"
           >
             <h2>
               Matsuhisa
             </h2>
-            <main>
-              <p
-                class="genre"
-              >
-                Japanese
-              </p>
-              <p
-                class="genre"
-              >
-                Sushi
-              </p>
-              <p
-                class="genre"
-              >
-                Asian
-              </p>
-              <p
-                class="genre"
-              >
-                Contemporary
-              </p>
-              <p
-                class="genre"
-              >
-                Seafood
-              </p>
-            </main>
           </section>
           <section
             class="card-information"
@@ -321,39 +325,39 @@ Object {
       <section
         class="restaurant-card"
       >
+        <header>
+          <p
+            class="genre"
+          >
+            Steak
+          </p>
+          <p
+            class="genre"
+          >
+            American
+          </p>
+          <p
+            class="genre"
+          >
+            Contemporary
+          </p>
+          <p
+            class="genre"
+          >
+            Seafood
+          </p>
+          <p
+            class="genre"
+          >
+            Cafe
+          </p>
+        </header>
         <section
           class="card-description"
         >
           <h2>
             Old Hickory Steakhouse
           </h2>
-          <main>
-            <p
-              class="genre"
-            >
-              Steak
-            </p>
-            <p
-              class="genre"
-            >
-              American
-            </p>
-            <p
-              class="genre"
-            >
-              Contemporary
-            </p>
-            <p
-              class="genre"
-            >
-              Seafood
-            </p>
-            <p
-              class="genre"
-            >
-              Cafe
-            </p>
-          </main>
         </section>
         <section
           class="card-information"
@@ -373,39 +377,39 @@ Object {
       <section
         class="restaurant-card"
       >
+        <header>
+          <p
+            class="genre"
+          >
+            Japanese
+          </p>
+          <p
+            class="genre"
+          >
+            Sushi
+          </p>
+          <p
+            class="genre"
+          >
+            Asian
+          </p>
+          <p
+            class="genre"
+          >
+            Contemporary
+          </p>
+          <p
+            class="genre"
+          >
+            Seafood
+          </p>
+        </header>
         <section
           class="card-description"
         >
           <h2>
             Matsuhisa
           </h2>
-          <main>
-            <p
-              class="genre"
-            >
-              Japanese
-            </p>
-            <p
-              class="genre"
-            >
-              Sushi
-            </p>
-            <p
-              class="genre"
-            >
-              Asian
-            </p>
-            <p
-              class="genre"
-            >
-              Contemporary
-            </p>
-            <p
-              class="genre"
-            >
-              Seafood
-            </p>
-          </main>
         </section>
         <section
           class="card-information"
@@ -486,11 +490,24 @@ Object {
       <main
         class="restaurants-container"
       >
-        <footer>
+        <section
+          class="no-card"
+        >
+          <img
+            alt="cafe"
+            src="cafe.svg"
+          />
+          <h2>
+            No restaurant to display!
+          </h2>
+        </section>
+        <footer
+          class="pagination"
+        >
           <button
             id="prev-page-btn"
           >
-             - 
+             previous page 
           </button>
           <p
             class="pages"
@@ -500,7 +517,7 @@ Object {
           <button
             id="next-page-btn"
           >
-             + 
+             next page 
           </button>
         </footer>
       </main>
@@ -510,11 +527,24 @@ Object {
     <main
       class="restaurants-container"
     >
-      <footer>
+      <section
+        class="no-card"
+      >
+        <img
+          alt="cafe"
+          src="cafe.svg"
+        />
+        <h2>
+          No restaurant to display!
+        </h2>
+      </section>
+      <footer
+        class="pagination"
+      >
         <button
           id="prev-page-btn"
         >
-           - 
+           previous page 
         </button>
         <p
           class="pages"
@@ -524,7 +554,7 @@ Object {
         <button
           id="next-page-btn"
         >
-           + 
+           next page 
         </button>
       </footer>
     </main>
