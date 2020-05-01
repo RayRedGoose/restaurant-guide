@@ -1,0 +1,21 @@
+@import "../../assets/css/variables.scss";
+@import "../../assets/css/index.scss";
+
+.pagination {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 3rem 0;
+  .pages {
+    margin: 0 2rem;
+    color: $accent-color;
+    font-family: $accent-font;
+    font-size: 1.5rem;
+    font-weight: 700;
+    letter-spacing: 0.05em;
+  }
+  button {
+    @extend %reg-button;
+    line-height: 1.2em;
+  }
+}
