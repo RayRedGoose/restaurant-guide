@@ -2,7 +2,8 @@ import searchFilterReducer from './searchFilter';
 import {
   IActionObject,
   IAddSearchFilterAction,
-  IRemoveSearchFilterAction
+  IRemoveSearchFilterAction,
+  IRemoveAllFiltersAction
 } from 'assets/ts/interfaces';
 
 describe('searchFilterReducer', () => {
@@ -33,6 +34,18 @@ describe('searchFilterReducer', () => {
   it("should return empty string if type of action is REMOVE_SEARCH_FILTER", () => {
     const mockAction: IRemoveSearchFilterAction = {
       type: 'REMOVE_SEARCH_FILTER'
+    };
+
+    const expected: string = '';
+
+    const result = searchFilterReducer('american', mockAction);
+
+    expect(result).toEqual(expected);
+  });
+
+  it("should return empty string if type of action is REMOVE_ALL_FILTERS", () => {
+    const mockAction: IRemoveAllFiltersAction = {
+      type: 'REMOVE_ALL_FILTERS'
     };
 
     const expected: string = '';
