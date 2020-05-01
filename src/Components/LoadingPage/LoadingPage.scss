@@ -1,0 +1,35 @@
+@import "../../assets/css/variables.scss";
+
+.loading {
+  width: 100%; height: 80vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  img {
+    animation: rotate 6s cubic-bezier(0.250, 0.460, 0.450, 0.940) infinite;
+    width: 4rem;
+  }
+  h2 {
+    color: $accent-color;
+    font-family: $accent-font;
+    font-size: 2rem;
+    font-weight: 700;
+    letter-spacing: 0.05em;
+    margin-left: 1rem;
+  }
+}
+
+@keyframes rotate {
+  0% {
+    transform: rotate(0deg);
+  }
+  25% {
+    transform: rotate(25deg);
+  }
+  75%{
+    transform: rotate(-25deg);
+  }
+  100% {
+    transform: rotate(0deg);
+  }
+}
