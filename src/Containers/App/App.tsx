@@ -7,6 +7,8 @@ import { getRestaurants } from '_apiCalls/apiCalls';
 import { addRestaurants, addMaxPages, addGenres, addAttires } from 'redux_utils/actions';
 import RestaurantContainer from 'Containers/RestaurantContainer/RestaurantContainer';
 import SortingPanel from 'Components/SortingPanel/SortingPanel';
+import LoadingPage from 'Components/LoadingPage/LoadingPage';
+import ErrorPage from 'Components/ErrorPage/ErrorPage';
 
 const App: React.FC = () => {
   const dispatch = useDispatch();
@@ -35,7 +37,7 @@ const App: React.FC = () => {
     }
     catch (error) {
       setLoaded(false);
-      setError(error);
+      setError(error.message);
     }
   };
 
@@ -46,9 +48,9 @@ const App: React.FC = () => {
   return (
     <div className="app">
       <SortingPanel />
-      { !loaded && error === '' && <p>Loading ...</p> }
+      { !loaded && error === '' && <LoadingPage /> }
       { loaded && error === '' && <RestaurantContainer />}
-      { error !== '' && <p>{ error }</p> }
+      { error !== '' && <ErrorPage error={error} /> }
     </div>
   );
 }
