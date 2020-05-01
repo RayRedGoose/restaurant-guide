@@ -1,3 +1,4 @@
+import './Pagination.scss';
 import React from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import { IAppStore } from 'assets/ts/interfaces';
@@ -19,17 +20,17 @@ const Pagination: React.FC = () => {
   }
 
   return (
-    <footer>
+    <footer className="pagination">
       { displayPage > 1 &&
         <button
           id="prev-page-btn"
-          onClick={() => decreaseCounter()}> - </button>
+          onClick={() => decreaseCounter()}> previous page </button>
       }
       <p className="pages">{`${displayPage} / ${maxPages}`}</p>
       { displayPage < maxPages &&
         <button
           id="next-page-btn"
-          onClick={() => increaseCounter()}> + </button>}
+          onClick={() => increaseCounter()}> next page </button>}
     </footer>
   );
 };
