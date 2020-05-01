@@ -60,3 +60,7 @@ export const addSearchFilter = (search: string): I.IAddSearchFilterAction => ({
 export const removeSearchFilter = (): I.IRemoveSearchFilterAction => ({
   type: 'REMOVE_SEARCH_FILTER'
 });
+
+export const removeAllFilters = (): I.IRemoveAllFiltersAction => ({
+  type: 'REMOVE_ALL_FILTERS'
+});
