@@ -1,6 +1,10 @@
 /**
  * @jest-environment jsdom
  */
+
+const apiKey: string = process.env.REACT_APP_API_KEY || '';
+const apiURI: string = process.env.REACT_APP_API_ENDPOINT || '';
+
 import { IRestaurantObject } from 'assets/ts/interfaces'
 import mockRestaurant from 'assets/ts/test/mockRestaurant';
 import { IHeaderObject, getRestaurants } from './apiCalls';
@@ -18,7 +22,7 @@ describe('apiCalls', () => {
       mockOptions = {
         method: "GET",
         headers: {
-          Authorization: "Api-Key q3MNxtfep8Gt",
+          Authorization: apiKey,
         }
       };
 
@@ -33,7 +37,7 @@ describe('apiCalls', () => {
     });
 
     it('should fetch with the correct arguments', () => {
-      const endpoint: string = 'https://code-challenge.spectrumtoolbox.com/api/restaurants';
+      const endpoint: string = apiURI;
       const expected: [string, IHeaderObject] = [endpoint, mockOptions];
 
       getRestaurants();
