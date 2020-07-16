@@ -1,4 +1,5 @@
 type method = 'GET';
+type envVar = string | undefined;
 
 export interface IHeaderObject {
   method: method,
@@ -8,12 +9,13 @@ export interface IHeaderObject {
 }
 
 export const getRestaurants = async () => {
-  const apiKey: string = 'Api-Key q3MNxtfep8Gt';
-  const endpoint: string = 'https://code-challenge.spectrumtoolbox.com/api/restaurants';
+  const apiKey: envVar = process.env.REACT_APP_API_KEY;
+  const endpoint: string = process.env.REACT_APP_API_ENDPOINT || '';
+
   const options: IHeaderObject = {
     method: 'GET',
     headers: {
-      Authorization: apiKey
+      Authorization: apiKey || ''
     }
   };
 
