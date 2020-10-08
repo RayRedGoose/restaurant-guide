@@ -1,27 +1,26 @@
-type method = 'GET';
-type envVar = string | undefined;
+type methodType = "GET";
 
 export interface IHeaderObject {
-  method: method,
+  method: methodType;
   headers: {
-    Authorization: string
-  }
+    Authorization: string;
+  };
 }
 
 export const getRestaurants = async () => {
-  const apiKey: envVar = process.env.REACT_APP_API_KEY;
-  const endpoint: string = process.env.REACT_APP_API_ENDPOINT || '';
+  const apiKey: string = process.env.REACT_APP_API_KEY || "";
+  const endpoint: string = process.env.REACT_APP_API_ENDPOINT || "";
 
   const options: IHeaderObject = {
-    method: 'GET',
+    method: "GET",
     headers: {
-      Authorization: apiKey || ''
-    }
+      Authorization: apiKey || "",
+    },
   };
 
   const res: Response = await fetch(endpoint, options);
   if (!res.ok) {
-    throw Error('Failure to get restaurants.');
+    throw Error("Failure to get restaurants.");
   }
   return await res.json();
 };
