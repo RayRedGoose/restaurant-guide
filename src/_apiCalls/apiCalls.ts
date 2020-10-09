@@ -19,8 +19,12 @@ export const getRestaurants = async () => {
   };
 
   const res: Response = await fetch(endpoint, options);
+
   if (!res.ok) {
     throw Error("Failure to get restaurants.");
   }
-  return await res.json();
+
+  const rests = await res.json();
+  console.log(rests);
+  return rests;
 };
