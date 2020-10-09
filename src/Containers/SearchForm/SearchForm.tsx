@@ -33,11 +33,13 @@ const SearchForm: React.FC = () => {
 
   return (
     <form className="search-form" onSubmit={submitSearch}>
-      <FontAwesomeIcon
-        icon={faTimes}
-        className={query === "" ? "none" : "remove-btn"}
-        onClick={cleanInput}
-      />
+      {query !== "" && (
+        <FontAwesomeIcon
+          className="remove-btn"
+          icon={faTimes}
+          onClick={cleanInput}
+        />
+      )}
       <input
         type="text"
         placeholder="Search"
@@ -47,7 +49,7 @@ const SearchForm: React.FC = () => {
         onBlur={() => setIsOpened(false)}
         className={!isOpened && query === "" ? "closed" : "opened"}
       />
-      <button className="search-btn">
+      <button className="search-btn" onClick={submitSearch}>
         <FontAwesomeIcon icon={faSearch} />
       </button>
     </form>
