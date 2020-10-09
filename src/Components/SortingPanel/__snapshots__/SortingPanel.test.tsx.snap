@@ -4,6 +4,7 @@ exports[`should match the snapshot 1`] = `
 <header
   className="sorting-panel"
 >
+  <SearchForm />
   <Filter
     type="states"
   />
@@ -13,6 +14,11 @@ exports[`should match the snapshot 1`] = `
   <Filter
     type="attires"
   />
-  <SearchForm />
+  <button
+    className="clean-btn"
+    onClick={[Function]}
+  >
+    Clean
+  </button>
 </header>
 `;
