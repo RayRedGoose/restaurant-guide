@@ -37,7 +37,8 @@
     "typescript": "^3.7.5"
   },
   "scripts": {
-    "start": "react-scripts start",
+    "dev": "react-scripts start",
+    "start": "serve -s build",
     "build": "react-scripts build",
     "test": "react-scripts test --env=node",
     "eject": "react-scripts eject"
@@ -86,6 +87,7 @@
     "eslint-plugin-jsx-a11y": "^6.2.3",
     "eslint-plugin-react": "^7.18.3",
     "eslint-plugin-react-hooks": "^2.3.0",
+    "serve": "^11.3.2",
     "ts-jest": "^25.2.0"
   },
   "jest": {
