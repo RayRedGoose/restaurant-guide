@@ -1,0 +1,46 @@
+.clean-btn {
+  border: 2px solid $error-color;
+  border-radius: 1rem;
+  color: darken($error-color, 25%);
+  margin-left: 1rem;
+  padding: 0.25rem 3rem;
+  &:hover,
+  &:focus {
+    background-color: darken($error-color, 15%);
+    color: $background-color;
+  }
+  &:active {
+    background-color: lighten($error-color, 2%);
+    color: $background-color;
+  }
+}
+
+.remove-btn {
+  cursor: pointer;
+  position: absolute;
+  top: 0.5rem;
+  width: 0.5rem;
+  opacity: 0.5;
+  &:hover {
+    opacity: 1;
+  }
+}
+
+.search-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: $box-color;
+  border-radius: 50%;
+  color: darken($box-color, 50%);
+  margin-left: -1rem;
+  padding: 0.5em;
+  svg {
+    height: 0.85rem;
+  }
+  &:hover,
+  &:focus {
+    background-color: darken($box-color, 50%);
+    color: $background-color;
+  }
+}

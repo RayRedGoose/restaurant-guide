@@ -16,31 +16,4 @@
       width: 25%;
     }
   }
-  .remove-btn {
-    cursor: pointer;
-    position: absolute;
-    top: 0.5rem;
-    width: 0.5rem;
-    opacity: 0.5;
-    &:hover {
-      opacity: 1;
-    }
-  }
-  .search-btn {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    background-color: $box-color;
-    border-radius: 50%;
-    color: darken($box-color, 50%);
-    margin-left: -1rem;
-    padding: 0.5em;
-    svg {
-      height: 0.85rem;
-    }
-    &:hover {
-      background-color: darken($box-color, 50%);
-      color: $background-color;
-    }
-  }
 }
