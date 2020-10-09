@@ -2,10 +2,16 @@ import "./RestaurantCard.scss";
 import React, { useState, useEffect } from "react";
 import { IRestaurantObject, IAppStore } from "assets/ts/interfaces";
 import open from "assets/images/open.svg";
-import attireImage from "assets/images/attire.svg";
 import tag from "assets/images/tag.svg";
 import address from "assets/images/address.svg";
 import { useSelector } from "react-redux";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import {
+  faBriefcase,
+  faGlasses,
+  faUserTie,
+  faTshirt,
+} from "@fortawesome/free-solid-svg-icons";
 
 interface Props {
   restaurant: IRestaurantObject;
@@ -44,10 +50,6 @@ const RestaurantCard: React.FC<Props> = ({ restaurant }) => {
     .split("; ")
     .map((hour: string, ind: number) => <span key={`hour${ind}`}>{hour}</span>);
 
-  const attireLines: JSX.Element[] = attire
-    .split(" ")
-    .map((att: string, ind: number) => <span key={`att${ind}`}>{att}</span>);
-
   const tagLines: JSX.Element[] = tags
     .split(",")
     .reduce((acc: string[], tag: string) => {
@@ -60,7 +62,18 @@ const RestaurantCard: React.FC<Props> = ({ restaurant }) => {
 
   return (
     <section className="restaurant-card" onClick={toggleCard}>
-      <header>{genreBlocks}</header>
+      <header>
+        {genreBlocks}
+        <p id="attire">
+          {attire.includes("business") && (
+            <FontAwesomeIcon icon={faBriefcase} />
+          )}
+          {attire.includes("smart") && <FontAwesomeIcon icon={faGlasses} />}
+          {attire === "formal" && <FontAwesomeIcon icon={faUserTie} />}
+          {attire === "casual" && <FontAwesomeIcon icon={faTshirt} />}
+          <span className="label">{attire}</span>
+        </p>
+      </header>
       <section className="card-description">
         <h2>{name}</h2>
         {isClicked && (
@@ -78,10 +91,6 @@ const RestaurantCard: React.FC<Props> = ({ restaurant }) => {
           <p id="open-hour">
             <img src={open} alt="open hours" />
             {openHours}
-          </p>
-          <p id="attire-lines">
-            <img src={attireImage} alt="attire" />
-            {attireLines}
           </p>
           <p>
             <img src={address} alt="address" />
