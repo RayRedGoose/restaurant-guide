@@ -1,32 +1,41 @@
-import './Filter.scss';
-import React, { useState, MouseEvent, useEffect } from 'react';
-import { useSelector, useDispatch } from 'react-redux';
-import states from 'assets/ts/states';
-import { IAppStore } from 'assets/ts/interfaces';
+import "./Filter.scss";
+import React, { useState, MouseEvent, useEffect } from "react";
+import { useSelector, useDispatch } from "react-redux";
+import states from "assets/ts/states";
+import { IAppStore } from "assets/ts/interfaces";
 import {
-  addStateFilter, removeStateFilter,
-  addGenreFilter, removeGenreFilter,
-  addAttireFilter, removeAttireFilter
-} from 'redux_utils/actions';
+  addStateFilter,
+  removeStateFilter,
+  addGenreFilter,
+  removeGenreFilter,
+  addAttireFilter,
+  removeAttireFilter,
+} from "redux_utils/actions";
 
 interface Props {
-  type: propType
-};
+  type: propType;
+}
 
 interface Lists {
-  states: string[],
-  genres: string[],
-  attires: string[]
-};
+  states: string[];
+  genres: string[];
+  attires: string[];
+}
 
-type propType = 'states' | 'genres' | 'attires';
+type propType = "states" | "genres" | "attires";
 
 const Filter: React.FC<Props> = ({ type }) => {
   const dispatch = useDispatch();
-  const initialText: string = 'all ' + type;
-  const [ active, setActive ] = useState<string>(initialText);
-  const [ isClicked, setIsClicked ] = useState<boolean>(false);
-  const { genres, attires, attireFilter, genreFilter, stateFilter } = useSelector((store: IAppStore) => ({
+  const initialText: string = "all " + type;
+  const [active, setActive] = useState<string>(initialText);
+  const [isClicked, setIsClicked] = useState<boolean>(false);
+  const {
+    genres,
+    attires,
+    attireFilter,
+    genreFilter,
+    stateFilter,
+  } = useSelector((store: IAppStore) => ({
     genres: store.genres,
     attires: store.attires,
     attireFilter: store.attireFilter,
@@ -37,21 +46,21 @@ const Filter: React.FC<Props> = ({ type }) => {
   const lists: Lists = {
     states: states,
     genres: genres,
-    attires: attires
+    attires: attires,
   };
 
   const filters = {
     states: stateFilter,
     genres: genreFilter,
-    attires: attireFilter
+    attires: attireFilter,
   };
 
   const toggleList = () => setIsClicked(!isClicked);
 
   const chooseAddingCreator = (filter: string): void => {
-    if (type === 'states') dispatch(addStateFilter(filter));
-    if (type === 'genres') dispatch(addGenreFilter(filter));
-    if (type === 'attires') dispatch(addAttireFilter(filter));
+    if (type === "states") dispatch(addStateFilter(filter));
+    if (type === "genres") dispatch(addGenreFilter(filter));
+    if (type === "attires") dispatch(addAttireFilter(filter));
   };
 
   const setActiveFilter = (e: MouseEvent<HTMLElement>): void => {
@@ -63,32 +72,34 @@ const Filter: React.FC<Props> = ({ type }) => {
   };
 
   const lines: JSX.Element[] = lists[type].map((li: string) => (
-    <li key={li} onClick={setActiveFilter}>{li}</li>
+    <li key={li} onClick={setActiveFilter}>
+      {li}
+    </li>
   ));
 
   const removeFilter = (): void => {
     setActive(initialText);
-    if (type === 'states') dispatch(removeStateFilter());
-    if (type === 'genres') dispatch(removeGenreFilter());
-    if (type === 'attires') dispatch(removeAttireFilter());
+    if (type === "states") dispatch(removeStateFilter());
+    if (type === "genres") dispatch(removeGenreFilter());
+    if (type === "attires") dispatch(removeAttireFilter());
     setIsClicked(false);
   };
 
   const changeTitle = (): void => {
-    if (filters[type] === '') setActive(initialText);
-  }
+    if (filters[type] === "") setActive(initialText);
+  };
 
-  useEffect(changeTitle, [ attireFilter, genreFilter, stateFilter ]);
+  useEffect(changeTitle, [attireFilter, genreFilter, stateFilter]);
 
   return (
     <section className="filter">
-      <h3 onClick={toggleList}>{ active }</h3>
-      {isClicked &&
+      <h3 onClick={toggleList}>{active}</h3>
+      {isClicked && (
         <ul>
           <li onClick={removeFilter}>all</li>
-          { lines }
+          {lines}
         </ul>
-      }
+      )}
     </section>
   );
 };
