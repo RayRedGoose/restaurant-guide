@@ -34,81 +34,77 @@ describe("App component", () => {
 
   afterEach(() => cleanup());
 
-  // it("should match the snapshot while fetch is loading", async () => {
-  //   await act(async () => {
-  //     wrapper = render(<App />);
-  //   });
-  //   expect(wrapper).toMatchSnapshot();
-  // });
-  //
-  // describe("Tests for happy result of fetching", () => {
-  //   const mockResponse: IRestaurantObject[] = [mockRestaurant];
-  //
-  //   beforeEach(() => {
-  //     (getRestaurants as jest.Mock).mockImplementation(() => {
-  //       return Promise.resolve(mockResponse);
-  //     });
-  //   });
-  //
-  //   it("should match the snapshot while fetch is done", async () => {
-  //     await act(async () => {
-  //       wrapper = render(<App />);
-  //     });
-  //     expect(wrapper).toMatchSnapshot();
-  //   });
-  //
-  //   it("should call getRestaurants after rendering", async () => {
-  //     await act(async () => {
-  //       render(<App />);
-  //     });
-  //     expect(getRestaurants).toHaveBeenCalled();
-  //   });
-  //
-  //   it("should call addRestaurants with result of fetching as an attribute", async () => {
-  //     await act(async () => {
-  //       render(<App />);
-  //     });
-  //     expect(addRestaurants).toHaveBeenCalledWith(mockResponse);
-  //   });
-  //
-  //   it("should call addMaxPages with number of fetched items as an attribute", async () => {
-  //     await act(async () => {
-  //       render(<App />);
-  //     });
-  //     expect(addMaxPages).toHaveBeenCalledWith(1);
-  //   });
-  //
-  //   it("should call addGenres with genres from restaurant objects as an attribute", async () => {
-  //     const genres: string[] = getGenres(mockResponse);
-  //     await act(async () => {
-  //       render(<App />);
-  //     });
-  //     expect(addGenres).toHaveBeenCalledWith(genres);
-  //   });
-  //
-  //   it("should call addAttires with attires from restaurant objects as an attribute", async () => {
-  //     const attires: string[] = getAttire(mockResponse);
-  //     await act(async () => {
-  //       render(<App />);
-  //     });
-  //     expect(addAttires).toHaveBeenCalledWith(attires);
-  //   });
-  // });
-  //
-  // describe("Tests for sad result of fetching", () => {
-  //   it("should match the snapshot while fetch is failed", async () => {
-  //     (getRestaurants as jest.Mock).mockImplementation(() => {
-  //       return Promise.reject(Error("Fetch failed!"));
-  //     });
-  //
-  //     await act(async () => {
-  //       wrapper = render(<App />);
-  //     });
-  //     expect(wrapper).toMatchSnapshot();
-  //   });
-  // });
+  it.skip("should match the snapshot while fetch is loading", async () => {
+    await act(async () => {
+      wrapper = render(<App />);
+    });
+    expect(wrapper).toMatchSnapshot();
+  });
 
-  it("should return true", () => {
-    expect(true).toEqual(true);
+  describe.skip("Tests for happy result of fetching", () => {
+    const mockResponse: IRestaurantObject[] = [mockRestaurant];
+
+    beforeEach(() => {
+      (getRestaurants as jest.Mock).mockImplementation(() => {
+        return Promise.resolve(mockResponse);
+      });
+    });
+
+    it("should match the snapshot while fetch is done", async () => {
+      await act(async () => {
+        wrapper = render(<App />);
+      });
+      expect(wrapper).toMatchSnapshot();
+    });
+
+    it("should call getRestaurants after rendering", async () => {
+      await act(async () => {
+        render(<App />);
+      });
+      expect(getRestaurants).toHaveBeenCalled();
+    });
+
+    it("should call addRestaurants with result of fetching as an attribute", async () => {
+      await act(async () => {
+        render(<App />);
+      });
+      expect(addRestaurants).toHaveBeenCalledWith(mockResponse);
+    });
+
+    it("should call addMaxPages with number of fetched items as an attribute", async () => {
+      await act(async () => {
+        render(<App />);
+      });
+      expect(addMaxPages).toHaveBeenCalledWith(1);
+    });
+
+    it("should call addGenres with genres from restaurant objects as an attribute", async () => {
+      const genres: string[] = getGenres(mockResponse);
+      await act(async () => {
+        render(<App />);
+      });
+      expect(addGenres).toHaveBeenCalledWith(genres);
+    });
+
+    it("should call addAttires with attires from restaurant objects as an attribute", async () => {
+      const attires: string[] = getAttire(mockResponse);
+      await act(async () => {
+        render(<App />);
+      });
+      expect(addAttires).toHaveBeenCalledWith(attires);
+    });
+  });
+
+  describe.skip("Tests for sad result of fetching", () => {
+    it("should match the snapshot while fetch is failed", async () => {
+      (getRestaurants as jest.Mock).mockImplementation(() => {
+        return Promise.reject(Error("Fetch failed!"));
+      });
+
+      await act(async () => {
+        wrapper = render(<App />);
+      });
+      expect(wrapper).toMatchSnapshot();
+    });
   });
 });
