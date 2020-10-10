@@ -38,6 +38,8 @@ const SearchForm: React.FC = () => {
           className="remove-btn"
           icon={faTimes}
           onClick={cleanInput}
+          onKeyPress={cleanInput}
+          tabIndex={0}
         />
       )}
       <input

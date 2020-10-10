@@ -75,7 +75,8 @@ const Filter: React.FC<Props> = ({ type }) => {
   const toggleFilter = (e: ChangeEvent<HTMLSelectElement>) => {
     e.target.size = 1;
     setActive(e.target.value);
-    return active !== initialText
+
+    return e.target.value !== initialText
       ? chooseAddingCreator(e.target.value)
       : removeFilter();
   };
