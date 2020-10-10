@@ -101,6 +101,7 @@ exports[`SearchForm should match the snapshot if input is not empty 1`] = `
       listItem={false}
       mask={null}
       onClick={[Function]}
+      onKeyPress={[Function]}
       pull={null}
       pulse={false}
       rotation={null}
@@ -108,6 +109,7 @@ exports[`SearchForm should match the snapshot if input is not empty 1`] = `
       spin={false}
       swapOpacity={false}
       symbol={false}
+      tabIndex={0}
       title=""
       transform={null}
     >
@@ -118,8 +120,10 @@ exports[`SearchForm should match the snapshot if input is not empty 1`] = `
         data-prefix="fas"
         focusable="false"
         onClick={[Function]}
+        onKeyPress={[Function]}
         role="img"
         style={Object {}}
+        tabIndex={0}
         viewBox="0 0 352 512"
         xmlns="http://www.w3.org/2000/svg"
       >

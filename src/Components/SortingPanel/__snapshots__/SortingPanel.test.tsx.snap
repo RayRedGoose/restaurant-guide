@@ -14,11 +14,6 @@ exports[`should match the snapshot 1`] = `
   <Filter
     type="attires"
   />
-  <button
-    className="clean-btn"
-    onClick={[Function]}
-  >
-    Clean
-  </button>
+  <CleanFIltersButton />
 </header>
 `;
