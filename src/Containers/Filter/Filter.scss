@@ -12,6 +12,7 @@
     display: flex;
     justify-content: space-between;
     text-transform: capitalize;
+    width: 100%;
     &[size="6"]:focus {
       background-color: #fff;
       border-top: 2px solid $box-color;
