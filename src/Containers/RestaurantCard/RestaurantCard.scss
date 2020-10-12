@@ -1,131 +1,152 @@
 @import "../../assets/css/variables.scss";
 
 .restaurant-card {
-  cursor: pointer;
   background-color: #fff;
   border-radius: 1rem;
+  border-bottom: 5px solid $box-color;
   box-shadow: 0px 0px 12px rgba(23, 126, 137, 0.2);
-  display: grid;
-  grid-template-areas: 'header header' 'title info' 'footer footer';
-  grid-template-columns: 0.55fr 0.45fr;
-  justify-content: space-between;
   margin: 1rem auto;
-  padding: 2rem;
-  width: 80%;
+  padding: 2rem 2rem 0;
+  width: 70%;
   header {
-    grid-area: header;
     display: flex;
+    align-items: center;
+    justify-content: space-between;
     width: 100%;
-    .genre {
-      background-color: $label-color;
+    section * {
+      display: inline-block;
+      margin-right: 0.5em;
+      background-color: $box-color;
       border-radius: 1em;
       color: $dark-color;
       font-size: 0.75rem;
+      font-weight: 700;
       letter-spacing: 0.03em;
-      margin-bottom: 0.5rem;
-      margin-right: 0.5em;
       padding: 0.4rem 0.8rem;
     }
   }
+}
+
+footer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0.75rem 2rem;
+  margin: 1rem -2rem 0;
+  font-weight: 700;
+  svg {
+    margin-left: 0.5rem;
+  }
+  &:focus,
   &:hover {
-    transform: scale(1.01);
-    box-shadow: 0px 0px 12px rgba(23, 126, 137, 0.4);
+    background-color: rgba(23, 126, 137, 0.05);
+    outline: none;
   }
 }
 
 .card-description {
-  grid-area: title;
-  h2 {
-    color: $accent-color;
-    font-family: $accent-font;
-    font-size: 2rem;
-    font-weight: 700;
-    letter-spacing: 0.05em;
-    margin: 1rem 0;
-  }
-  a {
-    color: $accent-color;
-    text-decoration: none;
-    position: relative;
-    z-index: 2;
-  }
-}
-
-.card-information {
-  grid-area: info;
+  margin: 1rem 0;
   display: flex;
   align-items: center;
   justify-content: space-between;
-  position: relative;
+  &.opened {
+    display: grid;
+    grid-template-areas: "title map" "hours map";
+    grid-template-columns: 1.75fr 1.25fr;
+    grid-template-rows: 1fr 2fr;
+    * {
+      align-self: start;
+    }
+  }
+  h2 {
+    grid-area: title;
+    width: 80%;
+    a {
+      border-bottom: 2px solid transparent;
+      color: $accent-color;
+      font-family: $accent-font;
+      font-size: 2rem;
+      font-weight: 700;
+      letter-spacing: 0.05em;
+      line-height: 1.25em;
+      transition: border-bottom 0.5s;
+      text-decoration: none;
+      &:focus,
+      &:hover {
+        border-bottom: 2px solid $accent-color;
+        outline: none;
+        & ~ svg {
+          opacity: 1;
+        }
+      }
+    }
+    svg {
+      opacity: 0;
+      height: 1.5rem;
+      margin-left: 0.5rem;
+      transition: opacity 0.5s;
+    }
+  }
+  h4 {
+    display: block;
+    font-weight: 700;
+    margin: 2rem 0 1rem;
+  }
+  .location,
+  .open-hour {
+    p {
+      display: block;
+      margin-bottom: 0.75rem;
+    }
+  }
+  .location {
+    grid-area: map;
+  }
+  .open-hour {
+    grid-area: hours;
+    h4 {
+      margin-top: 1rem;
+    }
+  }
+}
+
+.tags {
+  display: flex;
   p {
-    display: flex;
-    align-items: center;
-    line-height: 1.4;
-    &::before {
-      content: '';
-      background-position: center;
-      background-repeat: no-repeat;
-      background-size: 100%;
-      min-width: 1.25rem; height: 1.25rem;
-      margin-right: 0.5rem;
-    }
-    &.location {
-      width: 50%;
-      &::before {
-        background-image: url('../../assets/images/pin.svg');
-      }
-      span {
-        display: block;
-      }
-    }
-    &.phone {
-      width: 50%;
-      position: absolute;
-      right: 0;
-      &::before {
-        background-image: url('../../assets/images/phone.svg');
-      }
-    }
+    // font-size: 0.85rem;
+    font-weight: 700;
+    color: $accent-color;
+    margin-right: 0.5em;
   }
 }
 
 .additional-info {
-  grid-area: footer;
-  display: grid;
-  grid-template-columns: 1.25fr 0.5fr 1fr 1.25fr;
-  grid-column-gap: 2rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  color: $accent-color;
+  font-size: 0.85rem;
+  font-weight: 700;
+  text-transform: capitalize;
   margin-top: 2rem;
-  img {
-    height: 1.75rem;
-    margin: 1rem 0;
+  .attires {
+    * {
+      display: inline-block;
+    }
+    svg {
+      margin-right: 0.5rem;
+    }
   }
+}
+
+.info {
+  display: flex;
+  justify-content: flex-end;
+  min-width: 50%;
   p {
-    justify-self: center;
-    text-align: center;
-    span {
-      text-align: left;
-      display: block;
-      margin-bottom: 0.5rem;
-    }
+    margin-left: 2rem;
   }
-  #tags {
-    div {
-      display: flex;
-      flex-wrap: wrap;
-      align-items: flex-start;
-      height: fit-content;
-    }
-    span {
-      border: 1px solid $accent-color;
-      border-radius: 1em;
-      font-size: 0.8rem;
-      margin: 0.2em;
-      padding: 0.3em 1em;
-    }
-  }
-  #attire-lines {
-    span {
-      text-align: center;
-    }
+  svg {
+    margin-right: 0.5rem;
   }
 }

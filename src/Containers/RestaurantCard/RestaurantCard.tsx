@@ -1,24 +1,28 @@
 import "./RestaurantCard.scss";
 import React, { useState, useEffect } from "react";
-import { IRestaurantObject, IAppStore } from "assets/ts/interfaces";
-import open from "assets/images/open.svg";
-import tag from "assets/images/tag.svg";
-import address from "assets/images/address.svg";
 import { useSelector } from "react-redux";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {
+  faAngleDown,
+  faAngleUp,
+  faAngleDoubleRight,
   faBriefcase,
   faGlasses,
   faUserTie,
   faTshirt,
+  faMapMarkerAlt,
+  faPhoneAlt,
 } from "@fortawesome/free-solid-svg-icons";
+
+import { IRestaurantObject, IAppStore } from "assets/ts/interfaces";
+import Map, { Props as MapProps } from "Components/Map/Map";
 
 interface Props {
   restaurant: IRestaurantObject;
 }
 
 const RestaurantCard: React.FC<Props> = ({ restaurant }) => {
-  const [isClicked, setClicked] = useState<boolean>(false);
+  const [isClicked, setClicked] = useState<boolean>(true);
   const {
     name,
     city,
@@ -28,6 +32,8 @@ const RestaurantCard: React.FC<Props> = ({ restaurant }) => {
     hours,
     attire,
     address1,
+    lat,
+    long,
     zip,
     tags,
     website,
@@ -38,17 +44,25 @@ const RestaurantCard: React.FC<Props> = ({ restaurant }) => {
     setClicked(false);
   }, [store]);
 
+  const toggleCard = (): void => setClicked(!isClicked);
+
   const cityNew = city.replace(/,/g, ", ");
+
+  const mapProps: MapProps = {
+    name,
+    longitude: parseFloat(long),
+    latitude: parseFloat(lat),
+  };
+
+  console.log(long, lat);
+
   const genreBlocks: JSX.Element[] = genre
     .split(",")
-    .map((gnr: string, ind: number) => (
-      <p key={gnr + ind} className="genre">
-        {gnr}
-      </p>
-    ));
+    .map((gnr: string, ind: number) => <p key={gnr + ind}>{gnr}</p>);
+
   const openHours: JSX.Element[] = hours
     .split("; ")
-    .map((hour: string, ind: number) => <span key={`hour${ind}`}>{hour}</span>);
+    .map((hour: string, ind: number) => <p key={`hour${ind}`}>{hour}</p>);
 
   const tagLines: JSX.Element[] = tags
     .split(",")
@@ -56,53 +70,70 @@ const RestaurantCard: React.FC<Props> = ({ restaurant }) => {
       if (!acc.includes(tag)) acc = [...acc, tag];
       return acc;
     }, [])
-    .map((tag: string, ind: number) => <span key={`tag${ind}`}>{tag}</span>);
+    .map((tag: string, ind: number) => <p key={`tag${ind}`}>#{tag}</p>);
 
-  const toggleCard = (): void => setClicked(!isClicked);
+  const AttireLabel = (): JSX.Element => (
+    <p className="attires">
+      {attire.includes("business") && <FontAwesomeIcon icon={faBriefcase} />}
+      {attire.includes("smart") && <FontAwesomeIcon icon={faGlasses} />}
+      {attire === "formal" && <FontAwesomeIcon icon={faUserTie} />}
+      {attire === "casual" && <FontAwesomeIcon icon={faTshirt} />}
+      <p className="label">{attire}</p>
+    </p>
+  );
+
+  const Location = (): JSX.Element => (
+    <div className="location">
+      <Map {...mapProps} />
+      <h4>Address:</h4>
+      <p>{address1}</p>
+      <p>{`${cityNew}, ${state} ${zip}`}</p>
+    </div>
+  );
 
   return (
-    <section className="restaurant-card" onClick={toggleCard}>
+    <section className="restaurant-card" tabIndex={0}>
       <header>
-        {genreBlocks}
-        <p id="attire">
-          {attire.includes("business") && (
-            <FontAwesomeIcon icon={faBriefcase} />
-          )}
-          {attire.includes("smart") && <FontAwesomeIcon icon={faGlasses} />}
-          {attire === "formal" && <FontAwesomeIcon icon={faUserTie} />}
-          {attire === "casual" && <FontAwesomeIcon icon={faTshirt} />}
-          <span className="label">{attire}</span>
-        </p>
+        <section>{genreBlocks}</section>
       </header>
-      <section className="card-description">
-        <h2>{name}</h2>
-        {isClicked && (
+      <section
+        className={isClicked ? "card-description opened" : "card-description"}
+      >
+        <h2>
           <a href={website} target="_blank" rel="noopener noreferrer">
-            See website
+            {name}
           </a>
+          <FontAwesomeIcon icon={faAngleDoubleRight} />
+        </h2>
+        {!isClicked ? (
+          <main className="info">
+            <p>
+              <FontAwesomeIcon icon={faMapMarkerAlt} />
+              {`${cityNew}, ${state}`}
+            </p>
+            <p>
+              <FontAwesomeIcon icon={faPhoneAlt} />
+              {telephone}
+            </p>
+          </main>
+        ) : (
+          <main className="open-hour">
+            <h4>Open:</h4>
+            {openHours}
+          </main>
         )}
-      </section>
-      <section className="card-information">
-        {!isClicked && <p className="location">{`${cityNew}, ${state}`}</p>}
-        <p className="phone">{telephone}</p>
+        {isClicked && <Location />}
       </section>
       {isClicked && (
-        <footer className="additional-info">
-          <p id="open-hour">
-            <img src={open} alt="open hours" />
-            {openHours}
-          </p>
-          <p>
-            <img src={address} alt="address" />
-            <span>{address1}</span>
-            <span>{`${cityNew}, ${state} ${zip}`}</span>
-          </p>
-          <p id="tags">
-            <img src={tag} alt="tags" />
-            <div>{tagLines}</div>
-          </p>
-        </footer>
+        <section className="additional-info">
+          <p className="tags">{tagLines}</p>
+          <AttireLabel />
+        </section>
       )}
+      <footer tabIndex={0} onClick={toggleCard} onKeyPress={toggleCard}>
+        <p>{!isClicked ? "More" : "Less"}</p>
+        <FontAwesomeIcon icon={!isClicked ? faAngleDown : faAngleUp} />
+      </footer>
     </section>
   );
 };
