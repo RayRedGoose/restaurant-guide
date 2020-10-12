@@ -6,14 +6,13 @@ import React from "react";
 import { mount } from "enzyme";
 import SearchForm from "./SearchForm";
 import { addSearchFilter, removeSearchFilter } from "redux_utils/actions";
+jest.mock("redux_utils/actions");
 
 const mockDispatch = jest.fn();
 jest.mock("react-redux", () => ({
   useDispatch: () => mockDispatch,
   useSelector: () => "",
 }));
-
-jest.mock("redux_utils/actions");
 
 describe("SearchForm", () => {
   let wrapper: any;
@@ -42,6 +41,17 @@ describe("SearchForm", () => {
     input.simulate("focus");
 
     expect(input.getDOMNode()).toHaveClass("opened");
+  });
+
+  it("should change class of input if it's not on focus and input is empty", () => {
+    const input = wrapper.find("input");
+    input.simulate("focus");
+
+    expect(input.getDOMNode()).toHaveClass("opened");
+
+    input.simulate("blur");
+
+    expect(input.getDOMNode()).toHaveClass("closed");
   });
 
   it("should change class of input if it's not empty", () => {
