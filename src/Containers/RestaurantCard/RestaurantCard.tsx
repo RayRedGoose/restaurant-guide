@@ -22,7 +22,7 @@ interface Props {
 }
 
 const RestaurantCard: React.FC<Props> = ({ restaurant }) => {
-  const [isClicked, setClicked] = useState<boolean>(true);
+  const [isClicked, setClicked] = useState<boolean>(false);
   const {
     name,
     city,
