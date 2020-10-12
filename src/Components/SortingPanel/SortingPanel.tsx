@@ -2,7 +2,7 @@ import "./SortingPanel.scss";
 import React from "react";
 import Filter from "Containers/Filter/Filter";
 import SearchForm from "Containers/SearchForm/SearchForm";
-import CleanFiltersButton from "Containers/CleanFiltersButton/CleanFIltersButton";
+import CleanFiltersButton from "Containers/CleanFiltersButton/CleanFiltersButton";
 
 const SortingPanel: React.FC = () => (
   <header className="sorting-panel">
