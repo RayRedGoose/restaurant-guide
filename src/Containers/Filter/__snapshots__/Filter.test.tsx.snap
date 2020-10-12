@@ -1,13 +1,49 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`Filter should match the snapshot if type is attires 1`] = `
+exports[`Filter Attire Filter should match the snapshot if type is attires 1`] = `
 <section
   className="filter"
 >
   <select
-    onBlur={[Function]}
+    onBlur={
+      [MockFunction] {
+        "calls": Array [
+          Array [
+            Object {
+              "target": Object {
+                "size": 1,
+              },
+            },
+          ],
+        ],
+        "results": Array [
+          Object {
+            "type": "return",
+            "value": undefined,
+          },
+        ],
+      }
+    }
     onChange={[Function]}
-    onFocus={[Function]}
+    onFocus={
+      [MockFunction] {
+        "calls": Array [
+          Array [
+            Object {
+              "target": Object {
+                "size": 1,
+              },
+            },
+          ],
+        ],
+        "results": Array [
+          Object {
+            "type": "return",
+            "value": undefined,
+          },
+        ],
+      }
+    }
     value="all attires"
   >
     <option>
@@ -22,14 +58,50 @@ exports[`Filter should match the snapshot if type is attires 1`] = `
 </section>
 `;
 
-exports[`Filter should match the snapshot if type is genres 1`] = `
+exports[`Filter Genres Filter should match the snapshot if type is genres 1`] = `
 <section
   className="filter"
 >
   <select
-    onBlur={[Function]}
+    onBlur={
+      [MockFunction] {
+        "calls": Array [
+          Array [
+            Object {
+              "target": Object {
+                "size": 1,
+              },
+            },
+          ],
+        ],
+        "results": Array [
+          Object {
+            "type": "return",
+            "value": undefined,
+          },
+        ],
+      }
+    }
     onChange={[Function]}
-    onFocus={[Function]}
+    onFocus={
+      [MockFunction] {
+        "calls": Array [
+          Array [
+            Object {
+              "target": Object {
+                "size": 1,
+              },
+            },
+          ],
+        ],
+        "results": Array [
+          Object {
+            "type": "return",
+            "value": undefined,
+          },
+        ],
+      }
+    }
     value="all genres"
   >
     <option>
@@ -44,14 +116,50 @@ exports[`Filter should match the snapshot if type is genres 1`] = `
 </section>
 `;
 
-exports[`Filter should match the snapshot if type is states 1`] = `
+exports[`Filter State Filter should match the snapshot if type is genres 1`] = `
 <section
   className="filter"
 >
   <select
-    onBlur={[Function]}
+    onBlur={
+      [MockFunction] {
+        "calls": Array [
+          Array [
+            Object {
+              "target": Object {
+                "size": 1,
+              },
+            },
+          ],
+        ],
+        "results": Array [
+          Object {
+            "type": "return",
+            "value": undefined,
+          },
+        ],
+      }
+    }
     onChange={[Function]}
-    onFocus={[Function]}
+    onFocus={
+      [MockFunction] {
+        "calls": Array [
+          Array [
+            Object {
+              "target": Object {
+                "size": 1,
+              },
+            },
+          ],
+        ],
+        "results": Array [
+          Object {
+            "type": "return",
+            "value": undefined,
+          },
+        ],
+      }
+    }
     value="all states"
   >
     <option>

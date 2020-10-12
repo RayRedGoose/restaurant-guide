@@ -11,6 +11,7 @@ import {
   addAttireFilter,
   removeAttireFilter,
 } from "redux_utils/actions";
+import { handleFocus, handleBlur } from "./events";
 
 interface Props {
   type: propType;
@@ -89,8 +90,8 @@ const Filter: React.FC<Props> = ({ type }) => {
     <section className="filter">
       <select
         onChange={toggleFilter}
-        onFocus={(e) => (e.target.size = 6)}
-        onBlur={(e) => (e.target.size = 1)}
+        onFocus={handleFocus}
+        onBlur={handleBlur}
         value={active}
       >
         <option>{"all " + type}</option>
