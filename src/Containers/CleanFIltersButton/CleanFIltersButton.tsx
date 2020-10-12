@@ -5,7 +5,7 @@ import { faTimes } from "@fortawesome/free-solid-svg-icons";
 import { removeAllFilters } from "redux_utils/actions";
 import { IAppStore } from "assets/ts/interfaces";
 
-const CleanFIltersButton: React.FC = () => {
+const CleanFiltersButton: React.FC = () => {
   const [isDisplayed, setIsDisplayed] = useState<boolean>(false);
   const dispatch = useDispatch();
   const { attireFilter, genreFilter, stateFilter, searchFilter } = useSelector(
@@ -55,4 +55,4 @@ const CleanFIltersButton: React.FC = () => {
   );
 };
 
-export default CleanFIltersButton;
+export default CleanFiltersButton;
