@@ -54,8 +54,6 @@ const RestaurantCard: React.FC<Props> = ({ restaurant }) => {
     latitude: parseFloat(lat),
   };
 
-  console.log(long, lat);
-
   const genreBlocks: JSX.Element[] = genre
     .split(",")
     .map((gnr: string, ind: number) => <p key={gnr + ind}>{gnr}</p>);
