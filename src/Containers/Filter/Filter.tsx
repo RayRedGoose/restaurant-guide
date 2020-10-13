@@ -1,4 +1,3 @@
-import "./Filter.scss";
 import React, { useState, useEffect, ChangeEvent } from "react";
 import { useSelector, useDispatch } from "react-redux";
 import states from "assets/ts/states";
