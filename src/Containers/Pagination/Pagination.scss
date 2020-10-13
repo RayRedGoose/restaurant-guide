@@ -14,8 +14,4 @@
     font-weight: 700;
     letter-spacing: 0.05em;
   }
-  button {
-    @extend %reg-button;
-    line-height: 1.2em;
-  }
 }
