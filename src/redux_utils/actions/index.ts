@@ -72,10 +72,6 @@ export const addSortFilter = (
   sort: sort,
 });
 
-export const removeSortFilter = (): I.IRemoveSortFilterAction => ({
-  type: "REMOVE_SORT_FILTER",
-});
-
 export const removeAllFilters = (): I.IRemoveAllFiltersAction => ({
   type: "REMOVE_ALL_FILTERS",
 });

@@ -159,23 +159,13 @@ describe("Filter", () => {
   });
 
   it("should return object with a type of ADD_SORT_FILTER when addSortFilter is called", () => {
-    const mockSort: string = "state";
+    const mockSort: I.sortingTypes = "state";
     const expected: I.IAddSortFilterAction = {
       type: "ADD_SORT_FILTER",
       sort: mockSort,
     };
 
     const result = actions.addSortFilter(mockSort);
-
-    expect(result).toEqual(expected);
-  });
-
-  it("should return object with a type of REMOVE_SORT_FILTER when removeSortFilter is called", () => {
-    const expected: I.IRemoveSortFilterAction = {
-      type: "REMOVE_SORT_FILTER",
-    };
-
-    const result = actions.removeSortFilter();
 
     expect(result).toEqual(expected);
   });

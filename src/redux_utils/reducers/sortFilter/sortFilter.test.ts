@@ -2,8 +2,8 @@ import sortFilterReducer from "./sortFilter";
 import {
   IActionObject,
   IAddSortFilterAction,
-  IRemoveSortFilterAction,
   IRemoveAllFiltersAction,
+  sortingTypes,
 } from "assets/ts/interfaces";
 
 describe("sortFilterReducer", () => {
@@ -12,7 +12,7 @@ describe("sortFilterReducer", () => {
       type: "",
       sort: undefined,
     };
-    const expected: string = "name";
+    const expected: sortingTypes = "name";
     const result = sortFilterReducer(undefined, mockAction);
 
     expect(result).toEqual(expected);
@@ -24,21 +24,9 @@ describe("sortFilterReducer", () => {
       sort: "state",
     };
 
-    const expected: string = "state";
+    const expected: sortingTypes = "state";
 
     const result = sortFilterReducer("", mockAction);
-
-    expect(result).toEqual(expected);
-  });
-
-  it("should return name if type of action is REMOVE_SORT_FILTER", () => {
-    const mockAction: IRemoveSortFilterAction = {
-      type: "REMOVE_SORT_FILTER",
-    };
-
-    const expected: string = "name";
-
-    const result = sortFilterReducer("state", mockAction);
 
     expect(result).toEqual(expected);
   });
@@ -48,7 +36,7 @@ describe("sortFilterReducer", () => {
       type: "REMOVE_ALL_FILTERS",
     };
 
-    const expected: string = "name";
+    const expected: sortingTypes = "name";
 
     const result = sortFilterReducer("state", mockAction);
 

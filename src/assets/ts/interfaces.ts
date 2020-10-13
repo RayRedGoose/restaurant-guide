@@ -110,10 +110,6 @@ export interface IAddSortFilterAction {
   sort: string;
 }
 
-export interface IRemoveSortFilterAction {
-  type: "REMOVE_SORT_FILTER";
-}
-
 export interface IRemoveAllFiltersAction {
   type: "REMOVE_ALL_FILTERS";
 }
