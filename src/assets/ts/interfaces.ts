@@ -32,7 +32,10 @@ export interface IAppStore {
   genreFilter: string;
   attireFilter: string;
   searchFilter: string;
+  sortFilter: sortingTypes;
 }
+
+export type sortingTypes = "name" | "name-reverse" | "state" | "state-reverse";
 
 // ACTION CREATORS
 

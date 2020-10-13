@@ -65,7 +65,9 @@ export const removeSearchFilter = (): I.IRemoveSearchFilterAction => ({
   type: "REMOVE_SEARCH_FILTER",
 });
 
-export const addSortFilter = (sort: string): I.IAddSortFilterAction => ({
+export const addSortFilter = (
+  sort: I.sortingTypes
+): I.IAddSortFilterAction => ({
   type: "ADD_SORT_FILTER",
   sort: sort,
 });
