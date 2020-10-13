@@ -31,17 +31,17 @@ const SortFilter: React.FC = () => {
   };
 
   return (
-    <section className="filter">
+    <section className="filter" id="sorting">
       <select
         onChange={toggleFilter}
         onFocus={handleFocus}
         onBlur={handleBlur}
         value={active}
       >
-        <option value="name">Sort by name (A-Z)</option>
-        <option value="name-reverse">Sort by name (Z-A) </option>
-        <option value="state">Sort by state (A-Z)</option>
-        <option value="state-reverse">Sort by state (Z-A) </option>
+        <option value="name">name (A-Z)</option>
+        <option value="name-reverse">name (Z-A) </option>
+        <option value="state">state (A-Z)</option>
+        <option value="state-reverse">state (Z-A) </option>
       </select>
     </section>
   );

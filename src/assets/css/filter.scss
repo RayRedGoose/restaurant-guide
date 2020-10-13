@@ -9,7 +9,11 @@
   border-radius: 2rem;
   padding: 0 1rem;
   position: relative;
-  min-width: 9rem;
+  min-width: 11rem;
+  &#states,
+  &#sorting {
+    min-width: 9rem;
+  }
   &:hover {
     box-shadow: 0px 0px 4px 0px transparentize($box-color, 0.2);
   }

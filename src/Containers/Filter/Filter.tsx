@@ -86,7 +86,7 @@ const Filter: React.FC<Props> = ({ type }) => {
   ));
 
   return (
-    <section className="filter">
+    <section className="filter" id={type}>
       <select
         onChange={toggleFilter}
         onFocus={handleFocus}
