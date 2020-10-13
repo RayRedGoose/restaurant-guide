@@ -1,0 +1,36 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`SortFilter should match the snapshot if type is attires 1`] = `
+<section
+  className="filter"
+  id="sorting"
+>
+  <select
+    onBlur={[MockFunction]}
+    onChange={[Function]}
+    onFocus={[MockFunction]}
+    value="name"
+  >
+    <option
+      value="name"
+    >
+      name (A-Z)
+    </option>
+    <option
+      value="name-reverse"
+    >
+      name (Z-A) 
+    </option>
+    <option
+      value="state"
+    >
+      state (A-Z)
+    </option>
+    <option
+      value="state-reverse"
+    >
+      state (Z-A) 
+    </option>
+  </select>
+</section>
+`;
