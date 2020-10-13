@@ -5,10 +5,15 @@ exports[`Pagination should match the snapshot 1`] = `
   className="pagination"
 >
   <button
-    id="prev-page-btn"
+    className="pagination-btn"
     onClick={[Function]}
+    style={
+      Object {
+        "opacity": "1",
+      }
+    }
   >
-     previous page 
+    Previous page
   </button>
   <p
     className="pages"
@@ -16,10 +21,15 @@ exports[`Pagination should match the snapshot 1`] = `
     2 / 6
   </p>
   <button
-    id="next-page-btn"
+    className="pagination-btn"
     onClick={[Function]}
+    style={
+      Object {
+        "opacity": "1",
+      }
+    }
   >
-     next page 
+    Next page
   </button>
 </footer>
 `;

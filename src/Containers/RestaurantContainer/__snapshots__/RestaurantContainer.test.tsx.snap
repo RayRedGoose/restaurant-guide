@@ -125,15 +125,22 @@ Object {
         <footer
           class="pagination"
         >
+          <button
+            class="pagination-btn"
+            style="opacity: 0;"
+          >
+            Previous page
+          </button>
           <p
             class="pages"
           >
             1 / 3
           </p>
           <button
-            id="next-page-btn"
+            class="pagination-btn"
+            style="opacity: 1;"
           >
-             next page 
+            Next page
           </button>
         </footer>
       </main>
@@ -260,15 +267,22 @@ Object {
       <footer
         class="pagination"
       >
+        <button
+          class="pagination-btn"
+          style="opacity: 0;"
+        >
+          Previous page
+        </button>
         <p
           class="pages"
         >
           1 / 3
         </p>
         <button
-          id="next-page-btn"
+          class="pagination-btn"
+          style="opacity: 1;"
         >
-           next page 
+          Next page
         </button>
       </footer>
     </main>
@@ -877,9 +891,10 @@ Object {
           class="pagination"
         >
           <button
-            id="prev-page-btn"
+            class="pagination-btn"
+            style="opacity: 1;"
           >
-             previous page 
+            Previous page
           </button>
           <p
             class="pages"
@@ -887,9 +902,10 @@ Object {
             2 / 3
           </p>
           <button
-            id="next-page-btn"
+            class="pagination-btn"
+            style="opacity: 1;"
           >
-             next page 
+            Next page
           </button>
         </footer>
       </main>
@@ -914,9 +930,10 @@ Object {
         class="pagination"
       >
         <button
-          id="prev-page-btn"
+          class="pagination-btn"
+          style="opacity: 1;"
         >
-           previous page 
+          Previous page
         </button>
         <p
           class="pages"
@@ -924,9 +941,10 @@ Object {
           2 / 3
         </p>
         <button
-          id="next-page-btn"
+          class="pagination-btn"
+          style="opacity: 1;"
         >
-           next page 
+          Next page
         </button>
       </footer>
     </main>
