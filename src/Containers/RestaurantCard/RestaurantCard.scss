@@ -25,26 +25,26 @@
       padding: 0.4rem 0.8rem;
     }
   }
+  footer {
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0.75rem 2rem;
+    margin: 1rem -2rem 0;
+    font-size: 0.85rem;
+    font-weight: 700;
+    svg {
+      margin-left: 0.5rem;
+    }
+    &:focus,
+    &:hover {
+      background-color: rgba(23, 126, 137, 0.05);
+      outline: none;
+    }
+  }
 }
 
-footer {
-  cursor: pointer;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  padding: 0.75rem 2rem;
-  margin: 1rem -2rem 0;
-  font-size: 0.85rem;
-  font-weight: 700;
-  svg {
-    margin-left: 0.5rem;
-  }
-  &:focus,
-  &:hover {
-    background-color: rgba(23, 126, 137, 0.05);
-    outline: none;
-  }
-}
 .card-description {
   margin: 1rem 0;
   display: flex;
