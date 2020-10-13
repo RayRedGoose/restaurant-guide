@@ -13,7 +13,7 @@ const SearchForm: React.FC = () => {
   const searchFilter = useSelector((state: IAppStore) => state.searchFilter);
 
   useEffect(() => {
-    setQuery(searchFilter);
+    if (searchFilter === "") setQuery("");
   }, [searchFilter]);
 
   const submitSearch = (e: FormEvent<HTMLElement>): void => {
