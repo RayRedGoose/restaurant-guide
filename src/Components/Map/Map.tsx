@@ -63,7 +63,6 @@ class Map extends Component<Props, State> {
   render() {
     const { viewport } = this.state;
     const { latitude, longitude } = this.props;
-    console.log(process.env.REACT_APP_MAPBOX_TOKEN);
     return (
       <MapGL
         {...viewport}
