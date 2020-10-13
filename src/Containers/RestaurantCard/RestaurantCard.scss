@@ -45,24 +45,14 @@ footer {
     outline: none;
   }
 }
-
 .card-description {
   margin: 1rem 0;
   display: flex;
   align-items: center;
   justify-content: space-between;
-  &.opened {
-    display: grid;
-    grid-template-areas: "title map" "hours map";
-    grid-template-columns: 1.75fr 1.25fr;
-    grid-template-rows: 1fr 2fr;
-    * {
-      align-self: start;
-    }
-  }
   h2 {
     grid-area: title;
-    width: 80%;
+    width: 40%;
     a {
       border-bottom: 2px solid transparent;
       color: $accent-color;
@@ -108,6 +98,18 @@ footer {
     grid-area: hours;
     h4 {
       margin-top: 1rem;
+    }
+  }
+  &.opened {
+    display: grid;
+    grid-template-areas: "title map" "hours map";
+    grid-template-columns: 1.75fr 1.25fr;
+    grid-template-rows: 1fr 2fr;
+    * {
+      align-self: start;
+    }
+    h2 {
+      width: 80%;
     }
   }
 }

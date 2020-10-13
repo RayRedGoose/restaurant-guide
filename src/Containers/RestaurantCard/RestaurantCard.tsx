@@ -71,22 +71,22 @@ const RestaurantCard: React.FC<Props> = ({ restaurant }) => {
     .map((tag: string, ind: number) => <p key={`tag${ind}`}>#{tag}</p>);
 
   const AttireLabel = (): JSX.Element => (
-    <p className="attires">
+    <section className="attires">
       {attire.includes("business") && <FontAwesomeIcon icon={faBriefcase} />}
       {attire.includes("smart") && <FontAwesomeIcon icon={faGlasses} />}
       {attire === "formal" && <FontAwesomeIcon icon={faUserTie} />}
       {attire === "casual" && <FontAwesomeIcon icon={faTshirt} />}
       <p className="label">{attire}</p>
-    </p>
+    </section>
   );
 
   const Location = (): JSX.Element => (
-    <div className="location">
+    <section className="location">
       <Map {...mapProps} />
       <h4>Address:</h4>
       <p>{address1}</p>
       <p>{`${cityNew}, ${state} ${zip}`}</p>
-    </div>
+    </section>
   );
 
   return (
