@@ -105,11 +105,12 @@ footer {
     grid-template-areas: "title map" "hours map";
     grid-template-columns: 1.75fr 1.25fr;
     grid-template-rows: 1fr 2fr;
+    grid-column-gap: 3rem;
     * {
       align-self: start;
     }
     h2 {
-      width: 80%;
+      width: 100%;
     }
   }
 }
