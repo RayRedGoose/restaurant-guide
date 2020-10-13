@@ -1,8 +1,8 @@
 import "./App.scss";
 import React, { useEffect, useState } from "react";
-import { useDispatch } from "react-redux";
-import { IRestaurantObject } from "assets/ts/interfaces";
-import { sortByAlphabet, getGenres, getAttire } from "_utils";
+import { useDispatch, useSelector } from "react-redux";
+import { IRestaurantObject, IAppStore } from "assets/ts/interfaces";
+import { sortRestaurants, getGenres, getAttire } from "_utils";
 import { getRestaurants } from "_apiCalls/apiCalls";
 import {
   addRestaurants,
@@ -19,6 +19,7 @@ const App: React.FC = () => {
   const dispatch = useDispatch();
   const [error, setError] = useState<string>("");
   const [loaded, setLoaded] = useState<boolean>(false);
+  const sortFilter = useSelector((store: IAppStore) => store.sortFilter);
 
   const addInfoToStore = (restaurants: IRestaurantObject[]): void => {
     const genres: string[] = getGenres(restaurants);
@@ -28,7 +29,7 @@ const App: React.FC = () => {
   };
 
   const addToStore = (restaurants: IRestaurantObject[]): void => {
-    const restaurantsSorted = sortByAlphabet(restaurants);
+    const restaurantsSorted = sortRestaurants(restaurants, sortFilter);
     dispatch(addRestaurants(restaurantsSorted));
     dispatch(addMaxPages(restaurants.length));
     setLoaded(true);

@@ -1,9 +1,34 @@
-import { IRestaurantObject, IFilters } from "assets/ts/interfaces";
+import {
+  IRestaurantObject,
+  IFilters,
+  sortingTypes,
+} from "assets/ts/interfaces";
 
-export const sortByAlphabet = (restaurants: IRestaurantObject[]) =>
-  restaurants.sort((a: IRestaurantObject, b: IRestaurantObject) =>
-    a.name > b.name ? 1 : -1
-  );
+export const sortRestaurants = (
+  restaurants: IRestaurantObject[],
+  sortFilter: sortingTypes
+) => {
+  switch (sortFilter) {
+    case "name":
+      return restaurants.sort((a: IRestaurantObject, b: IRestaurantObject) =>
+        a.name > b.name ? 1 : -1
+      );
+    case "name-reverse":
+      return restaurants.sort((a: IRestaurantObject, b: IRestaurantObject) =>
+        a.name < b.name ? 1 : -1
+      );
+    case "state":
+      return restaurants.sort((a: IRestaurantObject, b: IRestaurantObject) =>
+        a.state > b.state ? 1 : -1
+      );
+    case "state-reverse":
+      return restaurants.sort((a: IRestaurantObject, b: IRestaurantObject) =>
+        a.state < b.state ? 1 : -1
+      );
+    default:
+      return restaurants;
+  }
+};
 
 export const getGenres = (restaurants: IRestaurantObject[]): string[] =>
   restaurants

@@ -5,16 +5,78 @@ import mockRestaurant, {
 } from "assets/ts/test/mockRestaurant";
 import mockStore from "assets/ts/test/mockStore";
 
-it("should return the array of restaurants sorted alphabetically by name", () => {
+it("should return the array of restaurants sorted by name alphabetically if sortFilter is name", () => {
   const restaurants: IRestaurantObject[] = [
     mockRestaurant,
     mockRestaurantAdditional,
   ];
+
   const expected: IRestaurantObject[] = [
     mockRestaurantAdditional,
     mockRestaurant,
   ];
-  const result: IRestaurantObject[] = utils.sortByAlphabet(restaurants);
+
+  const result: IRestaurantObject[] = utils.sortRestaurants(
+    restaurants,
+    "name"
+  );
+
+  expect(result).toEqual(expected);
+});
+
+it("should return the array of restaurants sorted by name in reverse alphabetical order if sortFilter is name-reverse", () => {
+  const restaurants: IRestaurantObject[] = [
+    mockRestaurantAdditional,
+    mockRestaurant,
+  ];
+
+  const expected: IRestaurantObject[] = [
+    mockRestaurant,
+    mockRestaurantAdditional,
+  ];
+
+  const result: IRestaurantObject[] = utils.sortRestaurants(
+    restaurants,
+    "name-reverse"
+  );
+
+  expect(result).toEqual(expected);
+});
+
+it("should return the array of restaurants sorted by state alphabetically if sortFilter is state", () => {
+  const restaurants: IRestaurantObject[] = [
+    mockRestaurant,
+    mockRestaurantAdditional,
+  ];
+
+  const expected: IRestaurantObject[] = [
+    mockRestaurantAdditional,
+    mockRestaurant,
+  ];
+
+  const result: IRestaurantObject[] = utils.sortRestaurants(
+    restaurants,
+    "state"
+  );
+
+  expect(result).toEqual(expected);
+});
+
+it("should return the array of restaurants sorted by state in reverse alphabetical order if sortFilter is state-reverse", () => {
+  const restaurants: IRestaurantObject[] = [
+    mockRestaurantAdditional,
+    mockRestaurant,
+  ];
+
+  const expected: IRestaurantObject[] = [
+    mockRestaurant,
+    mockRestaurantAdditional,
+  ];
+
+  const result: IRestaurantObject[] = utils.sortRestaurants(
+    restaurants,
+    "state-reverse"
+  );
 
   expect(result).toEqual(expected);
 });
