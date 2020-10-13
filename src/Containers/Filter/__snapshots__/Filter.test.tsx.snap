@@ -3,6 +3,7 @@
 exports[`Filter Attire Filter should match the snapshot if type is attires 1`] = `
 <section
   className="filter"
+  id="attires"
 >
   <select
     onBlur={
@@ -61,6 +62,7 @@ exports[`Filter Attire Filter should match the snapshot if type is attires 1`] =
 exports[`Filter Genres Filter should match the snapshot if type is genres 1`] = `
 <section
   className="filter"
+  id="genres"
 >
   <select
     onBlur={
@@ -119,6 +121,7 @@ exports[`Filter Genres Filter should match the snapshot if type is genres 1`] = 
 exports[`Filter State Filter should match the snapshot if type is genres 1`] = `
 <section
   className="filter"
+  id="states"
 >
   <select
     onBlur={
